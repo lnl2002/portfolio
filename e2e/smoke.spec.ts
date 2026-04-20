@@ -21,6 +21,7 @@ test.describe("english @ /", () => {
     await expect(page.locator(".hero-coords")).toContainText("HANOI · VIETNAM");
     await expect(page.locator(".hero-stats")).toContainText("50k+");
     await expect(page.locator(".hero-stats")).toContainText("merchants served");
+    await expect(page.locator(".hero-stats")).toContainText(/active merchants/i);
     await expect(page.locator(".satellite.s1")).toContainText("React");
     await expect(page.locator(".hero-ticker")).toContainText(/mission_log/);
   });
