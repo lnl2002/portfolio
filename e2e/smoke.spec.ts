@@ -68,6 +68,12 @@ test.describe("english @ /", () => {
   test("hero sub mentions 6-month leadership", async ({ page }) => {
     await expect(page.locator(".hero-sub")).toContainText(/6 months/i);
   });
+
+  test("mission M-01 mentions both FPT news and Facebook", async ({ page }) => {
+    const m1 = page.locator(".missions .mission").last();
+    await expect(m1).toContainText(/official news/i);
+    await expect(m1).toContainText(/Facebook/i);
+  });
 });
 
 test.describe("vietnamese @ /vi", () => {
