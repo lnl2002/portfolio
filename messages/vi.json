@@ -1,0 +1,17 @@
+{
+  "Metadata": {
+    "title": "Lại Ngọc Lâm — Portfolio",
+    "description": "Portfolio cá nhân của Lại Ngọc Lâm"
+  },
+  "Home": {
+    "heading": "Để bắt đầu, chỉnh sửa file page.tsx.",
+    "intro": "Cần điểm khởi đầu hoặc hướng dẫn thêm? Hãy xem <templates>Templates</templates> hoặc trung tâm <learning>Học tập</learning>.",
+    "deployNow": "Triển khai ngay",
+    "docs": "Tài liệu"
+  },
+  "LocaleSwitcher": {
+    "label": "Ngôn ngữ",
+    "en": "English",
+    "vi": "Tiếng Việt"
+  }
+}

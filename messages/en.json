@@ -1,0 +1,17 @@
+{
+  "Metadata": {
+    "title": "Lại Ngọc Lâm — Portfolio",
+    "description": "Personal portfolio of Lại Ngọc Lâm"
+  },
+  "Home": {
+    "heading": "To get started, edit the page.tsx file.",
+    "intro": "Looking for a starting point or more instructions? Head over to the <templates>Templates</templates> or the <learning>Learning</learning> center.",
+    "deployNow": "Deploy Now",
+    "docs": "Documentation"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "vi": "Tiếng Việt"
+  }
+}
