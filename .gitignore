@@ -49,6 +49,9 @@ yarn-error.log*
 /.design-handoff/
 /Portfolio-handoff.zip
 
+# visual test outputs
+/screenshots/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
