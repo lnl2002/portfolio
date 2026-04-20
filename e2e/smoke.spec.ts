@@ -58,6 +58,11 @@ test.describe("english @ /", () => {
     await expect(contact).toContainText(/Nghĩa Đô/);
     await expect(contact.locator(".foot-motto")).toContainText("per aspera ad astra");
   });
+
+  test("about card shows full-precision GPA", async ({ page }) => {
+    const card = page.locator(".about-card");
+    await expect(card).toContainText("8.024/10");
+  });
 });
 
 test.describe("vietnamese @ /vi", () => {
