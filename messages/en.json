@@ -71,7 +71,7 @@
     "backend": {
       "title": "Backend",
       "years": "3y",
-      "items": ["Node.js · Koa · Express", "NestJS", "Java", "REST · GraphQL · Pub/Sub"]
+      "items": ["Node.js · Koa · Express", "NestJS", "TypeScript APIs", "Java"]
     },
     "cloud": {
       "title": "Cloud",
