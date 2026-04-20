@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 const RECRUITME_STACK = [
@@ -34,6 +35,10 @@ export async function Projects() {
       <div className="project-grid">
         <article className="project featured">
           <div className="p-tag">{t("recruitme.tag")}</div>
+          <div className="p-ribbon">
+            <i className="p-ribbon-dot" />
+            <span>{t("recruitme.featuredBadge")}</span>
+          </div>
           <header>
             <h3>{t("recruitme.title")}</h3>
             <p>{t("recruitme.desc")}</p>
@@ -48,28 +53,28 @@ export async function Projects() {
               </div>
               <div className="pv-body">
                 <div className="pv-row">
-                  <span className="pv-avatar" />
+                  <span className="pv-step">01</span>
                   <span className="pv-col">
-                    <b>Nguyễn Minh Anh</b>
-                    <em>Frontend Engineer · 3y</em>
+                    <b>{t("recruitme.pipelineStep1Title")}</b>
+                    <em>{t("recruitme.pipelineStep1Meta")}</em>
                   </span>
-                  <span className="pv-score">87</span>
+                  <span className="pv-score">{t("recruitme.pipelineStep1Score")}</span>
                 </div>
                 <div className="pv-row">
-                  <span className="pv-avatar v2" />
+                  <span className="pv-step">02</span>
                   <span className="pv-col">
-                    <b>Trần Hải</b>
-                    <em>Full-Stack · 4y</em>
+                    <b>{t("recruitme.pipelineStep2Title")}</b>
+                    <em>{t("recruitme.pipelineStep2Meta")}</em>
                   </span>
-                  <span className="pv-score s2">92</span>
+                  <span className="pv-score s2">{t("recruitme.pipelineStep2Score")}</span>
                 </div>
                 <div className="pv-row">
-                  <span className="pv-avatar v3" />
+                  <span className="pv-step">03</span>
                   <span className="pv-col">
-                    <b>Lê Phương</b>
-                    <em>Backend · 2y</em>
+                    <b>{t("recruitme.pipelineStep3Title")}</b>
+                    <em>{t("recruitme.pipelineStep3Meta")}</em>
                   </span>
-                  <span className="pv-score s3">71</span>
+                  <span className="pv-score s3">{t("recruitme.pipelineStep3Score")}</span>
                 </div>
                 <div className="pv-bar">
                   <i style={{ width: "72%" }} />
@@ -77,6 +82,16 @@ export async function Projects() {
                 </div>
               </div>
             </div>
+            <figure className="pv-clip">
+              <Image
+                src="/fpt-graduation.jpg"
+                alt=""
+                width={180}
+                height={240}
+                sizes="160px"
+              />
+              <figcaption>{t("recruitme.pressClipLabel")}</figcaption>
+            </figure>
           </div>
           <footer>
             <div className="p-stack">

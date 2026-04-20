@@ -23,6 +23,7 @@
     "titleRich": "Làm phần mềm <em>với</em> <grad>vận tốc ánh sáng</grad>, nhưng chân vẫn trên mặt đất.",
     "subRich": "Full-stack engineer — 3 năm ship sản phẩm cho <b>50.000+ merchant</b>, 6 tháng lead team 5 người làm Shopify apps, data platform, và thi thoảng vài cú bẻ lái quỹ đạo.",
     "seeMissions": "Xem hành trình",
+    "downloadCv": "Tải CV",
     "email": "laingoclam3112@gmail.com",
     "statYearsNum": "3",
     "statYearsUnit": "năm",
@@ -59,7 +60,9 @@
     "cardStatusValue": "Sẵn sàng quỹ đạo mới",
     "linkLinkedin": "LinkedIn ↗",
     "linkEmail": "Email ↗",
-    "linkPhone": "+84 98 406 8859"
+    "linkPhone": "+84 98 406 8859",
+    "linkCv": "Tải CV ↓",
+    "avatarAlt": "Ảnh chân dung Lại Ngọc Lâm"
   },
   "Skills": {
     "sectionLabel": "Bảng điều khiển",
@@ -126,18 +129,29 @@
     "recruitme": {
       "tag": "nổi bật · đồ án",
       "title": "RecruitMe",
-      "desc": "Nền tảng tuyển dụng với generative-AI chấm CV & OCR.",
+      "desc": "Nền tảng tuyển dụng ứng dụng AI — OCR CV (AWS Textract) và chấm điểm bằng generative-AI (Gemini). Đồ án tốt nghiệp đạt xuất sắc, được đăng trên bản tin và fanpage chính thức của Đại học FPT.",
       "metaRole": "Team Lead · 5 người",
       "metaDate": "8 – 12/2024",
-      "previewUrl": "recruitme.app — /candidates/237",
-      "previewFooter": "AI scoring ▸ OCR parse ▸ Shortlist"
+      "previewUrl": "recruitme.app — /pipeline",
+      "previewFooter": "Upload ▸ Textract OCR ▸ Gemini score ▸ Shortlist",
+      "featuredBadge": "Lên bản tin · Đại học FPT",
+      "pipelineStep1Title": "Upload CV",
+      "pipelineStep1Meta": "PDF · DOCX · ảnh",
+      "pipelineStep1Score": "S3",
+      "pipelineStep2Title": "OCR trích xuất",
+      "pipelineStep2Meta": "AWS Textract",
+      "pipelineStep2Score": "92",
+      "pipelineStep3Title": "AI chấm điểm",
+      "pipelineStep3Meta": "Gemini · role-fit",
+      "pipelineStep3Score": "87",
+      "pressClipLabel": "Đại học FPT · Tốt nghiệp 2025"
     },
     "seo": {
       "tag": "đang bay",
       "title": "Avada SEO Suite",
-      "desc": "Pipeline tối ưu ảnh ở quy mô triệu object.",
-      "metricNum": "1,2M",
-      "metricLabel": "ảnh xử lý / lần chạy",
+      "desc": "Xây module tối ưu ảnh — chỉ là một mảnh trong bộ SEO suite phục vụ ~50k store Shopify, nhiều store có hàng trăm nghìn đến hàng triệu ảnh sản phẩm.",
+      "metricNum": "50k",
+      "metricLabel": "store phục vụ · hàng triệu ảnh / store",
       "metaMerchants": "~50k merchant",
       "metaCompany": "Avada Group"
     },
@@ -145,7 +159,7 @@
       "tag": "đang bay",
       "title": "AP Speed Optimizer",
       "desc": "Zero → 5.000+ merchant trong sáu tháng. Lead sản phẩm + team.",
-      "kpi1Num": "5.142",
+      "kpi1Num": "5.000+",
       "kpi1Label": "merchant active",
       "kpi2Num": "+500",
       "kpi2Unit": "/tháng",

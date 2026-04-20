@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 export async function About() {
@@ -23,6 +24,16 @@ export async function About() {
         </div>
 
         <aside className="about-card">
+          <div className="about-avatar" aria-hidden="false">
+            <Image
+              src="/avatar.jpg"
+              alt={t("avatarAlt")}
+              width={128}
+              height={128}
+              sizes="112px"
+              priority
+            />
+          </div>
           <header>
             <span className="card-dot" />
             <h3>{t("cardTitle")}</h3>
@@ -58,6 +69,9 @@ export async function About() {
             </a>
             <a href="mailto:laingoclam3112@gmail.com">{t("linkEmail")}</a>
             <a href="tel:+84984068859">{t("linkPhone")}</a>
+            <a className="link-cv" href="/cv.pdf" download>
+              {t("linkCv")}
+            </a>
           </footer>
         </aside>
       </div>

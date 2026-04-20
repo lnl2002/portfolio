@@ -23,6 +23,7 @@
     "titleRich": "Building software <em>at</em> the <grad>speed of light</grad>, grounded on Earth.",
     "subRich": "Full-stack engineer — 3 years shipping products that serve <b>50,000+ merchants</b>, plus 6 months leading a 5-person crew across Shopify apps, data platforms, and the occasional orbital maneuver.",
     "seeMissions": "See the missions",
+    "downloadCv": "Download CV",
     "email": "laingoclam3112@gmail.com",
     "statYearsNum": "3",
     "statYearsUnit": "y",
@@ -59,7 +60,9 @@
     "cardStatusValue": "Open to new orbits",
     "linkLinkedin": "LinkedIn ↗",
     "linkEmail": "Email ↗",
-    "linkPhone": "+84 98 406 8859"
+    "linkPhone": "+84 98 406 8859",
+    "linkCv": "Download CV ↓",
+    "avatarAlt": "Portrait of Lại Ngọc Lâm"
   },
   "Skills": {
     "sectionLabel": "Instrument panel",
@@ -126,18 +129,29 @@
     "recruitme": {
       "tag": "featured · graduation",
       "title": "RecruitMe",
-      "desc": "Recruitment platform with generative-AI CV scoring & OCR.",
+      "desc": "AI-powered recruitment platform — OCR CV parsing (AWS Textract) and generative-AI scoring (Gemini). Graduation thesis recognized as outstanding and featured in FPT University's official news + Facebook channels.",
       "metaRole": "Team Lead · 5 people",
       "metaDate": "Aug – Dec 2024",
-      "previewUrl": "recruitme.app — /candidates/237",
-      "previewFooter": "AI scoring ▸ OCR parse ▸ Shortlist"
+      "previewUrl": "recruitme.app — /pipeline",
+      "previewFooter": "Upload ▸ Textract OCR ▸ Gemini score ▸ Shortlist",
+      "featuredBadge": "Featured · FPT University News",
+      "pipelineStep1Title": "CV upload",
+      "pipelineStep1Meta": "PDF · DOCX · image",
+      "pipelineStep1Score": "S3",
+      "pipelineStep2Title": "OCR extract",
+      "pipelineStep2Meta": "AWS Textract",
+      "pipelineStep2Score": "92",
+      "pipelineStep3Title": "AI scoring",
+      "pipelineStep3Meta": "Gemini · role-fit",
+      "pipelineStep3Score": "87",
+      "pressClipLabel": "FPT University · Graduation 2025"
     },
     "seo": {
       "tag": "in orbit",
       "title": "Avada SEO Suite",
-      "desc": "Bulk image optimization pipeline at million-object scale.",
-      "metricNum": "1.2M",
-      "metricLabel": "images processed / run",
+      "desc": "Built the image-optimization pipeline — one slice of a broader SEO suite serving ~50k Shopify stores, some with hundreds of thousands to millions of product images each.",
+      "metricNum": "50k",
+      "metricLabel": "stores served · up to millions of images each",
       "metaMerchants": "~50k merchants",
       "metaCompany": "Avada Group"
     },
@@ -145,7 +159,7 @@
       "tag": "in orbit",
       "title": "AP Speed Optimizer",
       "desc": "Zero → 5,000+ merchants in six months. Led product + crew.",
-      "kpi1Num": "5,142",
+      "kpi1Num": "5,000+",
       "kpi1Label": "active merchants",
       "kpi2Num": "+500",
       "kpi2Unit": "/mo",

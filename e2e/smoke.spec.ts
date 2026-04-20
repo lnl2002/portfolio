@@ -53,6 +53,38 @@ test.describe("english @ /", () => {
     await expect(projects.first().locator("h3")).toHaveText("RecruitMe");
   });
 
+  test("RecruitMe has FPT-news ribbon, no fake candidate names, press clip present", async ({
+    page,
+  }) => {
+    const featured = page.locator(".projects .project.featured");
+    await expect(featured.locator(".p-ribbon")).toContainText(/FPT University News/i);
+    await expect(featured.locator(".pv-clip figcaption")).toContainText(/FPT University/i);
+    const body = await featured.textContent();
+    expect(body, "fake names must be gone").not.toMatch(/Nguyễn Minh Anh|Trần Hải|Lê Phương/);
+    await expect(featured).toContainText(/OCR extract/i);
+    await expect(featured).toContainText(/AI scoring/i);
+  });
+
+  test("about card shows avatar + download CV link", async ({ page }) => {
+    const card = page.locator(".about-card");
+    await expect(card.locator(".about-avatar img")).toBeVisible();
+    const cv = card.locator("a.link-cv");
+    await expect(cv).toBeVisible();
+    await expect(cv).toHaveAttribute("href", "/cv.pdf");
+    await expect(cv).toHaveAttribute("download", "");
+  });
+
+  test("hero CTA exposes a CV download button", async ({ page }) => {
+    const cta = page.locator(".hero-cta a[href='/cv.pdf']");
+    await expect(cta).toBeVisible();
+    await expect(cta).toHaveAttribute("download", "");
+  });
+
+  test("speed KPI reads 5,000+", async ({ page }) => {
+    const speed = page.locator(".projects .project").nth(2);
+    await expect(speed.locator(".pv-kpi b").first()).toContainText("5,000+");
+  });
+
   test("contact shows email, phone, address, motto", async ({ page }) => {
     const contact = page.locator("section#contact");
     await expect(contact).toContainText("laingoclam3112@gmail.com");
@@ -70,7 +102,8 @@ test.describe("english @ /", () => {
   });
 
   test("mission M-01 mentions both FPT news and Facebook", async ({ page }) => {
-    const m1 = page.locator(".missions .mission").last();
+    const m1 = page.locator(".missions .mission").filter({ hasText: "M-01" });
+    await expect(m1).toHaveCount(1);
     await expect(m1).toContainText(/official news/i);
     await expect(m1).toContainText(/Facebook/i);
   });
