@@ -168,3 +168,74 @@ test("Lai_Ngoc_Lam_CV.pdf served from public", async ({ request }) => {
   expect(res.status()).toBe(200);
   expect(res.headers()["content-type"]).toContain("pdf");
 });
+
+test.describe("SEO", () => {
+  test("robots.txt allows all and references sitemap", async ({ request }) => {
+    const res = await request.get("/robots.txt");
+    expect(res.status()).toBe(200);
+    const body = await res.text();
+    expect(body).toMatch(/User-Agent:\s*\*/i);
+    expect(body).toMatch(/Allow:\s*\//i);
+    expect(body).toMatch(/Sitemap:\s*https?:\/\/.+\/sitemap\.xml/i);
+  });
+
+  test("sitemap.xml lists both locales with hreflang alternates", async ({ request }) => {
+    const res = await request.get("/sitemap.xml");
+    expect(res.status()).toBe(200);
+    const body = await res.text();
+    expect(body).toContain("<urlset");
+    expect(body).toMatch(/<loc>https?:\/\/[^<]+<\/loc>/);
+    expect(body).toMatch(/hreflang="en"/);
+    expect(body).toMatch(/hreflang="vi"/);
+    expect(body).toMatch(/hreflang="x-default"/);
+  });
+
+  test("home page has canonical + hreflang + OG + twitter + JSON-LD", async ({ page }) => {
+    await page.goto("/");
+
+    const canonical = page.locator('link[rel="canonical"]');
+    await expect(canonical).toHaveCount(1);
+    await expect(canonical).toHaveAttribute("href", /^https?:\/\//);
+
+    await expect(page.locator('link[rel="alternate"][hreflang="en"]')).toHaveCount(1);
+    await expect(page.locator('link[rel="alternate"][hreflang="vi"]')).toHaveCount(1);
+    await expect(page.locator('link[rel="alternate"][hreflang="x-default"]')).toHaveCount(1);
+
+    await expect(page.locator('meta[property="og:title"]')).toHaveCount(1);
+    await expect(page.locator('meta[property="og:description"]')).toHaveCount(1);
+    await expect(page.locator('meta[property="og:type"]')).toHaveAttribute("content", "profile");
+    await expect(page.locator('meta[property="og:image"]').first()).toHaveAttribute(
+      "content",
+      /opengraph-image/
+    );
+    await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute("content", "en_US");
+
+    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+      "content",
+      "summary_large_image"
+    );
+
+    const ldJson = page.locator('script[type="application/ld+json"]');
+    expect(await ldJson.count()).toBeGreaterThan(0);
+    const texts = await ldJson.allTextContents();
+    const merged = texts.join(" ");
+    expect(merged).toContain('"@type":"Person"');
+    expect(merged).toContain("Lại Ngọc Lâm");
+    expect(merged).toContain("jobTitle");
+  });
+
+  test("Vietnamese page has vi_VN og:locale and vi canonical", async ({ page }) => {
+    await page.goto("/vi");
+    await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute("content", "vi_VN");
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/vi$/);
+  });
+
+  test("opengraph-image endpoint returns a PNG", async ({ page, request }) => {
+    await page.goto("/");
+    const ogUrl = await page.locator('meta[property="og:image"]').first().getAttribute("content");
+    expect(ogUrl, "og:image meta missing").toBeTruthy();
+    const res = await request.get(ogUrl as string);
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("image/png");
+  });
+});

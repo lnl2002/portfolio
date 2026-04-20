@@ -1013,6 +1013,7 @@ html[data-theme="light"] .p-visual { background: #ffffff; }
 .cp-right > div:last-child { border-bottom: 0; }
 .cp-right dt { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .14em; align-self: center; }
 .cp-right dd { margin: 0; font-size: 14px; color: var(--ink); }
+.cp-right address { display: inline; font-style: normal; }
 .cp-right a { border-bottom: 1px dashed var(--line-2); }
 .cp-right a:hover { color: var(--accent); border-color: var(--accent); }
 

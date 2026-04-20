@@ -49,14 +49,20 @@ export async function Contact() {
           <div>
             <dt>{t("linkedinLabel")}</dt>
             <dd>
-              <a href="https://www.linkedin.com/in/lai-ngoc-lam" target="_blank" rel="noopener">
+              <a
+                href="https://www.linkedin.com/in/lai-ngoc-lam"
+                target="_blank"
+                rel="me noopener"
+              >
                 {t("linkedinDisplay")}
               </a>
             </dd>
           </div>
           <div>
             <dt>{t("addressLabel")}</dt>
-            <dd>{t("address")}</dd>
+            <dd>
+              <address>{t("address")}</address>
+            </dd>
           </div>
         </dl>
       </div>
