@@ -64,6 +64,10 @@ test.describe("english @ /", () => {
     const card = page.locator(".about-card");
     await expect(card).toContainText("8.024/10");
   });
+
+  test("hero sub mentions 6-month leadership", async ({ page }) => {
+    await expect(page.locator(".hero-sub")).toContainText(/6 months/i);
+  });
 });
 
 test.describe("vietnamese @ /vi", () => {
