@@ -69,7 +69,7 @@ export async function About() {
             </a>
             <a href="mailto:laingoclam3112@gmail.com">{t("linkEmail")}</a>
             <a href="tel:+84984068859">{t("linkPhone")}</a>
-            <a className="link-cv" href="/cv.pdf" download>
+            <a className="link-cv" href="/Lai_Ngoc_Lam_CV.pdf" download>
               {t("linkCv")}
             </a>
           </footer>

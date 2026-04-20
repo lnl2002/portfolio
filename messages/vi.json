@@ -27,7 +27,7 @@
     "email": "laingoclam3112@gmail.com",
     "statYearsNum": "3",
     "statYearsUnit": "năm",
-    "statYearsLabel": "code chính thức",
+    "statYearsLabel": "kinh nghiệm",
     "statMerchantsNum": "50k+",
     "statMerchantsLabel": "merchant phục vụ",
     "statInfraNum": "33%",
@@ -89,7 +89,7 @@
     "leadership": {
       "title": "Leadership & product",
       "years": "6 tháng",
-      "items": ["Lead team cross-functional (5)", "Lên kế hoạch sản phẩm", "Roadmap & OKRs", "Tuyển dụng & 1:1", "Giao tiếp stakeholder", "Xử lý incident"]
+      "items": ["Lead team cross-functional (5)", "Lên kế hoạch sản phẩm", "Định hướng kỹ thuật", "Quản lý nhân sự"]
     }
   },
   "Missions": {
@@ -137,14 +137,17 @@
       "featuredBadge": "Lên bản tin · Đại học FPT",
       "pipelineStep1Title": "Upload CV",
       "pipelineStep1Meta": "PDF · DOCX · ảnh",
-      "pipelineStep1Score": "S3",
       "pipelineStep2Title": "OCR trích xuất",
       "pipelineStep2Meta": "AWS Textract",
-      "pipelineStep2Score": "92",
       "pipelineStep3Title": "AI chấm điểm",
       "pipelineStep3Meta": "Gemini · role-fit",
-      "pipelineStep3Score": "87",
-      "pressClipLabel": "Đại học FPT · Tốt nghiệp 2025"
+      "pressClipLabel": "Đại học FPT · Tốt nghiệp 2025",
+      "pressTitle": "RecruitMe – Tự động hóa quy trình tuyển dụng với AI của sinh viên Trường Đại học FPT",
+      "pressSource": "daihoc.fpt.edu.vn",
+      "pressCategory": "Học thuật",
+      "pressDate": "06/01/2026",
+      "pressCta": "Đọc bài viết",
+      "pressUrl": "https://daihoc.fpt.edu.vn/hoc-thuat-2/recruitme-giai-phap-tu-dong-hoa-tuyen-dung-cua-sinh-vien-truong-dai-hoc-fpt/"
     },
     "seo": {
       "tag": "đang bay",
@@ -152,6 +155,11 @@
       "desc": "Xây module tối ưu ảnh — chỉ là một mảnh trong bộ SEO suite phục vụ ~50k store Shopify, nhiều store có hàng trăm nghìn đến hàng triệu ảnh sản phẩm.",
       "metricNum": "50k",
       "metricLabel": "store phục vụ · hàng triệu ảnh / store",
+      "pipe1": "ẢNH SẢN PHẨM",
+      "pipe2": "NÉN",
+      "pipe2Sub": "webp · avif",
+      "pipe3": "CDN",
+      "pipe4": "STORE",
       "metaMerchants": "~50k merchant",
       "metaCompany": "Avada Group"
     },
@@ -164,6 +172,9 @@
       "kpi2Num": "+500",
       "kpi2Unit": "/tháng",
       "kpi2Label": "tăng trưởng TB",
+      "eqMultiplierNum": "6",
+      "eqMultiplierUnit": " tháng",
+      "eqMultiplierLabel": "liên tiếp",
       "metaRole": "Team Lead",
       "metaDuration": "6 tháng tăng trưởng đều"
     },
@@ -171,6 +182,12 @@
       "tag": "nội bộ",
       "title": "Avada Data Platform",
       "desc": "21 Shopify app → BigQuery. Revenue, LTV, churn, signals.",
+      "outLabel": "outputs",
+      "out1": "doanh thu",
+      "out2": "biên",
+      "out3": "LTV",
+      "out4": "churn",
+      "out5": "tín hiệu",
       "footRich": "<b>-33%</b> chi phí hạ tầng · $6k → $4k / tháng",
       "metaScope": "Nội bộ",
       "metaCompany": "Avada Group"

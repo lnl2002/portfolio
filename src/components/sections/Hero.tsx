@@ -48,7 +48,7 @@ export async function Hero() {
             <a className="btn btn-outline" href={`mailto:${t("email")}`}>
               {t("email")}
             </a>
-            <a className="btn btn-ghost" href="/cv.pdf" download>
+            <a className="btn btn-ghost" href="/Lai_Ngoc_Lam_CV.pdf" download>
               <span>{t("downloadCv")}</span>
               <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden>
                 <path

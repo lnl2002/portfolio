@@ -53,16 +53,27 @@ test.describe("english @ /", () => {
     await expect(projects.first().locator("h3")).toHaveText("RecruitMe");
   });
 
-  test("RecruitMe has FPT-news ribbon, no fake candidate names, press clip present", async ({
+  test("RecruitMe has FPT-news ribbon, no fake candidate names, cited article card", async ({
     page,
   }) => {
     const featured = page.locator(".projects .project.featured");
     await expect(featured.locator(".p-ribbon")).toContainText(/FPT University News/i);
-    await expect(featured.locator(".pv-clip figcaption")).toContainText(/FPT University/i);
     const body = await featured.textContent();
     expect(body, "fake names must be gone").not.toMatch(/Nguyễn Minh Anh|Trần Hải|Lê Phương/);
     await expect(featured).toContainText(/OCR extract/i);
     await expect(featured).toContainText(/AI scoring/i);
+
+    const press = featured.locator("a.press-card");
+    await expect(press).toBeVisible();
+    await expect(press).toHaveAttribute(
+      "href",
+      "https://daihoc.fpt.edu.vn/hoc-thuat-2/recruitme-giai-phap-tu-dong-hoa-tuyen-dung-cua-sinh-vien-truong-dai-hoc-fpt/"
+    );
+    await expect(press).toHaveAttribute("target", "_blank");
+    await expect(press).toHaveAttribute("rel", /noopener/);
+    await expect(press.locator(".press-title")).toContainText(/RecruitMe/);
+    await expect(press.locator(".press-badge")).toContainText(/daihoc\.fpt\.edu\.vn/i);
+    await expect(press.locator(".press-cta")).toContainText(/Read the article/i);
   });
 
   test("about card shows avatar + download CV link", async ({ page }) => {
@@ -70,19 +81,19 @@ test.describe("english @ /", () => {
     await expect(card.locator(".about-avatar img")).toBeVisible();
     const cv = card.locator("a.link-cv");
     await expect(cv).toBeVisible();
-    await expect(cv).toHaveAttribute("href", "/cv.pdf");
+    await expect(cv).toHaveAttribute("href", "/Lai_Ngoc_Lam_CV.pdf");
     await expect(cv).toHaveAttribute("download", "");
   });
 
   test("hero CTA exposes a CV download button", async ({ page }) => {
-    const cta = page.locator(".hero-cta a[href='/cv.pdf']");
+    const cta = page.locator(".hero-cta a[href='/Lai_Ngoc_Lam_CV.pdf']");
     await expect(cta).toBeVisible();
     await expect(cta).toHaveAttribute("download", "");
   });
 
   test("speed KPI reads 5,000+", async ({ page }) => {
     const speed = page.locator(".projects .project").nth(2);
-    await expect(speed.locator(".pv-kpi b").first()).toContainText("5,000+");
+    await expect(speed.locator(".eq-chip.eq-result b")).toContainText("5,000+");
   });
 
   test("contact shows email, phone, address, motto", async ({ page }) => {
@@ -152,8 +163,8 @@ test("locale switcher navigates without console errors", async ({ page }) => {
   expect(errors, `unexpected errors: ${errors.join(" | ")}`).toEqual([]);
 });
 
-test("cv.pdf served from public", async ({ request }) => {
-  const res = await request.get("/cv.pdf");
+test("Lai_Ngoc_Lam_CV.pdf served from public", async ({ request }) => {
+  const res = await request.get("/Lai_Ngoc_Lam_CV.pdf");
   expect(res.status()).toBe(200);
   expect(res.headers()["content-type"]).toContain("pdf");
 });

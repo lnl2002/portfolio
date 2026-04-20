@@ -23,7 +23,7 @@ Set up a minimal, clean Next.js starter at `F:/Workplace/Me/Portfolio_v2` for "v
 ## What's in the repo
 
 - Standard `create-next-app` scaffold (App Router, `src/app/`, Tailwind preset, default landing page).
-- `public/cv.pdf` — author's CV, copied from the pre-existing file in the target directory so the portfolio can link to it later.
+- `public/Lai_Ngoc_Lam_CV.pdf` — author's CV, copied from the pre-existing file in the target directory so the portfolio can link to it later.
 - `docs/superpowers/specs/` — this spec.
 - Default `.gitignore`, `tsconfig.json`, `eslint.config.mjs`, `postcss.config.mjs` from the template.
 
@@ -31,12 +31,12 @@ Set up a minimal, clean Next.js starter at `F:/Workplace/Me/Portfolio_v2` for "v
 
 - No shadcn/ui, Radix, Framer Motion, MDX, dark-mode toggle, SEO helpers, analytics, CMS integration.
 - No placeholder sections (Hero / About / Projects / Contact). The default starter page is kept so future work begins from a clean slate.
-- No custom components, hooks, or utilities. The only non-template change is `public/cv.pdf`.
+- No custom components, hooks, or utilities. The only non-template change is `public/Lai_Ngoc_Lam_CV.pdf`.
 
 ## Constraints encountered
 
 - The target directory name `Portfolio_v2` contains capital letters, which npm rejects as a package name. Workaround: scaffold into `portfolio-v2/` subdir, then flatten into the parent directory. The resulting `package.json` name is `portfolio-v2`.
-- `create-next-app` requires an empty target directory. The pre-existing `Lại Ngọc Lâm CV.pdf` was moved out before scaffolding and restored afterward to `public/cv.pdf`.
+- `create-next-app` requires an empty target directory. The pre-existing `Lại Ngọc Lâm Lai_Ngoc_Lam_CV.pdf` was moved out before scaffolding and restored afterward to `public/Lai_Ngoc_Lam_CV.pdf`.
 
 ## Git
 

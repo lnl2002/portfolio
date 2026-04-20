@@ -19,7 +19,6 @@ const RECRUITME_STACK = [
 const SEO_STACK = ["React", "Koa", "Cloud Run", "Pub/Sub", "Cloud Storage"];
 const SPEED_STACK = ["React", "Koa", "Firebase", "Cloud Functions"];
 const DATA_STACK = ["BigQuery", "Pub/Sub", "Cloud Functions", "Node"];
-const SPEED_BARS = ["18%", "34%", "48%", "60%", "78%", "100%"];
 
 export async function Projects() {
   const t = await getTranslations("Projects");
@@ -43,8 +42,8 @@ export async function Projects() {
             <h3>{t("recruitme.title")}</h3>
             <p>{t("recruitme.desc")}</p>
           </header>
-          <div className="p-visual" aria-hidden>
-            <div className="pv-window">
+          <div className="p-visual">
+            <div className="pv-window" aria-hidden>
               <div className="pv-chrome">
                 <i />
                 <i />
@@ -58,7 +57,6 @@ export async function Projects() {
                     <b>{t("recruitme.pipelineStep1Title")}</b>
                     <em>{t("recruitme.pipelineStep1Meta")}</em>
                   </span>
-                  <span className="pv-score">{t("recruitme.pipelineStep1Score")}</span>
                 </div>
                 <div className="pv-row">
                   <span className="pv-step">02</span>
@@ -66,7 +64,6 @@ export async function Projects() {
                     <b>{t("recruitme.pipelineStep2Title")}</b>
                     <em>{t("recruitme.pipelineStep2Meta")}</em>
                   </span>
-                  <span className="pv-score s2">{t("recruitme.pipelineStep2Score")}</span>
                 </div>
                 <div className="pv-row">
                   <span className="pv-step">03</span>
@@ -74,7 +71,6 @@ export async function Projects() {
                     <b>{t("recruitme.pipelineStep3Title")}</b>
                     <em>{t("recruitme.pipelineStep3Meta")}</em>
                   </span>
-                  <span className="pv-score s3">{t("recruitme.pipelineStep3Score")}</span>
                 </div>
                 <div className="pv-bar">
                   <i style={{ width: "72%" }} />
@@ -82,16 +78,44 @@ export async function Projects() {
                 </div>
               </div>
             </div>
-            <figure className="pv-clip">
-              <Image
-                src="/fpt-graduation.jpg"
-                alt=""
-                width={180}
-                height={240}
-                sizes="160px"
-              />
-              <figcaption>{t("recruitme.pressClipLabel")}</figcaption>
-            </figure>
+            <a
+              className="press-card"
+              href={t("recruitme.pressUrl")}
+              target="_blank"
+              rel="noopener"
+              aria-label={`${t("recruitme.pressCta")} — ${t("recruitme.pressTitle")}`}
+            >
+              <span className="press-badge">
+                <i className="press-dot" />
+                {t("recruitme.pressCategory")} · {t("recruitme.pressSource")}
+              </span>
+              <span className="press-thumb">
+                <Image
+                  src="/fpt-graduation.jpg"
+                  alt=""
+                  width={220}
+                  height={160}
+                  sizes="(max-width: 900px) 220px, 180px"
+                />
+              </span>
+              <span className="press-title">{t("recruitme.pressTitle")}</span>
+              <span className="press-meta">
+                <time>{t("recruitme.pressDate")}</time>
+                <span className="press-cta">
+                  {t("recruitme.pressCta")}
+                  <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden>
+                    <path
+                      d="M7 17 17 7M9 7h8v8"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </a>
           </div>
           <footer>
             <div className="p-stack">
@@ -117,19 +141,24 @@ export async function Projects() {
               <b>{t("seo.metricNum")}</b>
               <em>{t("seo.metricLabel")}</em>
             </div>
-            <svg className="pv-graph" viewBox="0 0 200 80" preserveAspectRatio="none">
-              <path
-                d="M0 70 L20 62 L40 58 L60 48 L80 42 L100 34 L120 28 L140 22 L160 18 L180 14 L200 10"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-              <path
-                d="M0 70 L20 62 L40 58 L60 48 L80 42 L100 34 L120 28 L140 22 L160 18 L180 14 L200 10 L200 80 L0 80 Z"
-                fill="currentColor"
-                opacity=".12"
-              />
-            </svg>
+            <div className="pv-pipeline">
+              <span className="pp-node">
+                <b>{t("seo.pipe1")}</b>
+              </span>
+              <span className="pp-arrow">→</span>
+              <span className="pp-node pp-accent">
+                <b>{t("seo.pipe2")}</b>
+                <em>{t("seo.pipe2Sub")}</em>
+              </span>
+              <span className="pp-arrow">→</span>
+              <span className="pp-node">
+                <b>{t("seo.pipe3")}</b>
+              </span>
+              <span className="pp-arrow">→</span>
+              <span className="pp-node">
+                <b>{t("seo.pipe4")}</b>
+              </span>
+            </div>
           </div>
           <footer>
             <div className="p-stack">
@@ -151,23 +180,27 @@ export async function Projects() {
             <p>{t("speed.desc")}</p>
           </header>
           <div className="p-visual pv-alt" aria-hidden>
-            <div className="pv-kpi">
-              <div>
-                <b>{t("speed.kpi1Num")}</b>
-                <em>{t("speed.kpi1Label")}</em>
-              </div>
-              <div>
+            <div className="pv-equation">
+              <div className="eq-chip">
                 <b>
                   {t("speed.kpi2Num")}
                   <span>{t("speed.kpi2Unit")}</span>
                 </b>
                 <em>{t("speed.kpi2Label")}</em>
               </div>
-            </div>
-            <div className="pv-bars">
-              {SPEED_BARS.map((h, i) => (
-                <i key={i} style={{ ["--h" as string]: h } as React.CSSProperties} />
-              ))}
+              <span className="eq-op">×</span>
+              <div className="eq-chip">
+                <b>
+                  {t("speed.eqMultiplierNum")}
+                  <span>{t("speed.eqMultiplierUnit")}</span>
+                </b>
+                <em>{t("speed.eqMultiplierLabel")}</em>
+              </div>
+              <span className="eq-op">=</span>
+              <div className="eq-chip eq-result">
+                <b>{t("speed.kpi1Num")}</b>
+                <em>{t("speed.kpi1Label")}</em>
+              </div>
             </div>
           </div>
           <footer>
@@ -199,6 +232,14 @@ export async function Projects() {
               <span className="pv-node big">BigQuery</span>
               <span className="pv-arrow">→</span>
               <span className="pv-node">Dash</span>
+            </div>
+            <div className="pv-outputs">
+              <em>{t("data.outLabel")}</em>
+              <span className="pv-out">{t("data.out1")}</span>
+              <span className="pv-out">{t("data.out2")}</span>
+              <span className="pv-out">{t("data.out3")}</span>
+              <span className="pv-out">{t("data.out4")}</span>
+              <span className="pv-out">{t("data.out5")}</span>
             </div>
             <div className="pv-foot">
               {t.rich("data.footRich", {

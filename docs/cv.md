@@ -1,6 +1,6 @@
 # Lại Ngọc Lâm — CV
 
-> Source: `public/cv.pdf` (122.6 KB). Extracted 2026-04-20 for use as
+> Source: `public/Lai_Ngoc_Lam_CV.pdf` (122.6 KB). Extracted 2026-04-20 for use as
 > the canonical portfolio content source. Update this file whenever
 > the PDF changes, then mirror edits into `messages/en.json` and
 > `messages/vi.json`.

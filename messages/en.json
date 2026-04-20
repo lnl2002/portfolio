@@ -27,7 +27,7 @@
     "email": "laingoclam3112@gmail.com",
     "statYearsNum": "3",
     "statYearsUnit": "y",
-    "statYearsLabel": "shipping code",
+    "statYearsLabel": "experience",
     "statMerchantsNum": "50k+",
     "statMerchantsLabel": "merchants served",
     "statInfraNum": "33%",
@@ -89,7 +89,7 @@
     "leadership": {
       "title": "Leadership & product",
       "years": "6mo",
-      "items": ["Cross-functional team lead (5)", "Product planning", "Roadmap & OKRs", "Hiring & 1:1s", "Stakeholder comms", "Incident response"]
+      "items": ["Cross-functional team lead (5)", "Product planning", "Technical direction", "Personnel management"]
     }
   },
   "Missions": {
@@ -137,14 +137,17 @@
       "featuredBadge": "Featured · FPT University News",
       "pipelineStep1Title": "CV upload",
       "pipelineStep1Meta": "PDF · DOCX · image",
-      "pipelineStep1Score": "S3",
       "pipelineStep2Title": "OCR extract",
       "pipelineStep2Meta": "AWS Textract",
-      "pipelineStep2Score": "92",
       "pipelineStep3Title": "AI scoring",
       "pipelineStep3Meta": "Gemini · role-fit",
-      "pipelineStep3Score": "87",
-      "pressClipLabel": "FPT University · Graduation 2025"
+      "pressClipLabel": "FPT University · Graduation 2025",
+      "pressTitle": "RecruitMe — AI-powered recruitment automation, by FPT University students",
+      "pressSource": "daihoc.fpt.edu.vn",
+      "pressCategory": "Học thuật",
+      "pressDate": "06 Jan 2026",
+      "pressCta": "Read the article",
+      "pressUrl": "https://daihoc.fpt.edu.vn/hoc-thuat-2/recruitme-giai-phap-tu-dong-hoa-tuyen-dung-cua-sinh-vien-truong-dai-hoc-fpt/"
     },
     "seo": {
       "tag": "in orbit",
@@ -152,6 +155,11 @@
       "desc": "Built the image-optimization pipeline — one slice of a broader SEO suite serving ~50k Shopify stores, some with hundreds of thousands to millions of product images each.",
       "metricNum": "50k",
       "metricLabel": "stores served · up to millions of images each",
+      "pipe1": "PRODUCT IMG",
+      "pipe2": "COMPRESS",
+      "pipe2Sub": "webp · avif",
+      "pipe3": "CDN",
+      "pipe4": "STORE",
       "metaMerchants": "~50k merchants",
       "metaCompany": "Avada Group"
     },
@@ -164,6 +172,9 @@
       "kpi2Num": "+500",
       "kpi2Unit": "/mo",
       "kpi2Label": "avg growth",
+      "eqMultiplierNum": "6",
+      "eqMultiplierUnit": " mo",
+      "eqMultiplierLabel": "consecutive",
       "metaRole": "Team Lead",
       "metaDuration": "6 mo sustained growth"
     },
@@ -171,6 +182,12 @@
       "tag": "internal",
       "title": "Avada Data Platform",
       "desc": "21 Shopify apps → BigQuery. Revenue, LTV, churn, signals.",
+      "outLabel": "outputs",
+      "out1": "revenue",
+      "out2": "margin",
+      "out3": "LTV",
+      "out4": "churn",
+      "out5": "signals",
       "footRich": "<b>-33%</b> infra cost · $6k → $4k / mo",
       "metaScope": "Internal",
       "metaCompany": "Avada Group"
