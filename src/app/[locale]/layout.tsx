@@ -3,11 +3,10 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { ThemeInitScript } from "@/components/ThemeInitScript";
 import { Backgrounds } from "@/components/Backgrounds";
+import { LangSync } from "@/components/LangSync";
 import { Nav } from "@/components/Nav";
 import { RevealOnScroll } from "@/components/RevealOnScroll";
-import "../globals.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -40,24 +39,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
-        />
-        <ThemeInitScript />
-      </head>
-      <body>
-        <NextIntlClientProvider>
-          <Backgrounds />
-          <Nav />
-          {children}
-          <RevealOnScroll />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider>
+      <LangSync />
+      <Backgrounds />
+      <Nav />
+      {children}
+      <RevealOnScroll />
+    </NextIntlClientProvider>
   );
 }

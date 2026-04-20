@@ -86,7 +86,12 @@ test("theme toggle flips data-theme", async ({ page }) => {
   await expect(html).toHaveAttribute("data-theme", "dark");
 });
 
-test("locale switcher navigates", async ({ page }) => {
+test("locale switcher navigates without console errors", async ({ page }) => {
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  page.on("console", (m) => {
+    if (m.type() === "error") errors.push(`[console.error] ${m.text()}`);
+  });
   await page.goto("/");
   await waitForHydration(page);
   await page
@@ -95,6 +100,7 @@ test("locale switcher navigates", async ({ page }) => {
     .click();
   await expect(page).toHaveURL(/\/vi$/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText(/vận tốc ánh sáng/);
+  expect(errors, `unexpected errors: ${errors.join(" | ")}`).toEqual([]);
 });
 
 test("cv.pdf served from public", async ({ request }) => {
