@@ -1,6 +1,20 @@
 import { getTranslations } from "next-intl/server";
 
-const RECRUITME_STACK = ["Next.js", "TypeScript", "Express", "MongoDB", "AWS Textract", "Gemini", "Twilio"];
+const RECRUITME_STACK = [
+  "Next.js",
+  "TypeScript",
+  "Tailwind CSS",
+  "NextUI",
+  "Express",
+  "MongoDB",
+  "AWS S3",
+  "AWS Textract",
+  "Gemini",
+  "Twilio",
+  "Vercel",
+  "EC2",
+  "Jira",
+];
 const SEO_STACK = ["React", "Koa", "Cloud Run", "Pub/Sub", "Cloud Storage"];
 const SPEED_STACK = ["React", "Koa", "Firebase", "Cloud Functions"];
 const DATA_STACK = ["BigQuery", "Pub/Sub", "Cloud Functions", "Node"];
