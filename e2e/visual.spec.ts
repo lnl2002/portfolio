@@ -20,15 +20,22 @@ async function prepare(
     content: `*, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition-duration: 0s !important; }`,
   });
   // Force-reveal sections that would otherwise wait for IntersectionObserver.
-  await page.evaluate(() => {
-    document
-      .querySelectorAll<HTMLElement>(
-        ".hero-copy, .orbit, .about-lede, .about-card, .skill-card, .mission, .project, .contact-panel"
-      )
-      .forEach((el) => {
+  // Loop for a few frames so we win the race with RevealOnScroll's useEffect,
+  // which may run after our first evaluate() and overwrite opacity back to 0.
+  await page.evaluate(async () => {
+    const sel =
+      ".hero-copy, .orbit, .about-lede, .about-card, .skill-card, .mission, .project, .contact-panel";
+    const reveal = () => {
+      document.querySelectorAll<HTMLElement>(sel).forEach((el) => {
         el.style.opacity = "1";
         el.style.transform = "none";
+        el.style.transition = "none";
       });
+    };
+    for (let i = 0; i < 20; i++) {
+      reveal();
+      await new Promise((r) => requestAnimationFrame(() => r(undefined)));
+    }
   });
   await page.waitForTimeout(300);
 }
