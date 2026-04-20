@@ -10,22 +10,15 @@ export function LocaleSwitcher() {
   const pathname = usePathname();
 
   return (
-    <nav
-      aria-label={t("label")}
-      className="flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400"
-    >
+    <nav aria-label={t("label")} className="locale-switcher">
       {routing.locales.map((cur, idx) => (
-        <span key={cur} className="flex items-center gap-3">
-          {idx > 0 && <span aria-hidden className="text-zinc-300 dark:text-zinc-700">/</span>}
+        <span key={cur} className="ls-group">
+          {idx > 0 && <span aria-hidden className="ls-sep">/</span>}
           <Link
             href={pathname}
             locale={cur}
             aria-current={cur === active ? "page" : undefined}
-            className={
-              cur === active
-                ? "font-semibold text-zinc-950 dark:text-zinc-50"
-                : "hover:text-zinc-900 dark:hover:text-zinc-100"
-            }
+            className={cur === active ? "ls-link is-active" : "ls-link"}
           >
             {t(cur)}
           </Link>

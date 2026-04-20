@@ -21,10 +21,10 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "bun run dev",
+    command: "bun run build && bun run start",
     url: baseURL,
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 180_000,
     stdout: "pipe",
     stderr: "pipe",
   },

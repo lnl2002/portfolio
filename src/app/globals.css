@@ -1,26 +1,32 @@
 @import "tailwindcss";
+@import "./design.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------- LocaleSwitcher (added on top of design) ---------- */
+.locale-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.locale-switcher .ls-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.locale-switcher .ls-sep {
+  color: var(--line-2);
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.locale-switcher .ls-link {
+  padding: 4px 2px;
+  transition: color 0.2s ease;
+}
+.locale-switcher .ls-link:hover {
+  color: var(--ink);
+}
+.locale-switcher .ls-link.is-active {
+  color: var(--accent);
 }

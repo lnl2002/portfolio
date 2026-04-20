@@ -1,17 +1,186 @@
 {
   "Metadata": {
-    "title": "Lại Ngọc Lâm — Portfolio",
-    "description": "Portfolio cá nhân của Lại Ngọc Lâm"
+    "title": "Lại Ngọc Lâm — Lập trình viên Full-Stack",
+    "description": "Full-stack engineer từ Hà Nội, ship sản phẩm tới hàng chục nghìn merchant. Shopify apps, data platforms, và đôi khi vài cú bẻ lái quỹ đạo."
   },
-  "Home": {
-    "heading": "Để bắt đầu, chỉnh sửa file page.tsx.",
-    "intro": "Cần điểm khởi đầu hoặc hướng dẫn thêm? Hãy xem <templates>Templates</templates> hoặc trung tâm <learning>Học tập</learning>.",
-    "deployNow": "Triển khai ngay",
-    "docs": "Tài liệu"
+  "Nav": {
+    "brandName": "Lại Ngọc Lâm",
+    "brandRole": "Full-Stack Developer · HAN",
+    "about": "Giới thiệu",
+    "stack": "Stack",
+    "missions": "Hành trình",
+    "projects": "Dự án",
+    "contact": "Liên hệ",
+    "themeToggleLabel": "Đổi theme",
+    "themeToggleTitle": "Chuyển ngày / đêm",
+    "letsTalk": "Bắt chuyện →"
+  },
+  "Hero": {
+    "coordsLat": "LAT 21.0370° B",
+    "coordsLng": "LNG 105.7983° Đ",
+    "coordsPlace": "HÀ NỘI · VIỆT NAM",
+    "availability": "Đang rảnh · Q2 2026",
+    "titleRich": "Làm phần mềm <em>với</em> <grad>vận tốc ánh sáng</grad>, nhưng chân vẫn trên mặt đất.",
+    "subRich": "Full-stack engineer, 3 năm ship sản phẩm phục vụ <b>50.000+ merchant</b>. Đang lead một team 5 người làm Shopify apps, data platform, và thi thoảng vài cú bẻ lái quỹ đạo.",
+    "seeMissions": "Xem hành trình",
+    "email": "laingoclam3112@gmail.com",
+    "statYearsNum": "3",
+    "statYearsUnit": "năm",
+    "statYearsLabel": "code chính thức",
+    "statMerchantsNum": "50k+",
+    "statMerchantsLabel": "merchant phục vụ",
+    "statInfraNum": "33%",
+    "statInfraLabel": "cắt giảm hạ tầng",
+    "statInstallsNum": "5k+",
+    "statInstallsLabel": "lượt cài / 6 tháng",
+    "planetLabelSpan": "LNL",
+    "planetLabelEm": "sol · iii",
+    "tickerLog": "// mission_log",
+    "tickerItem1": "ship cho ~50k merchant shopify",
+    "tickerItem2": "tối ưu ảnh hàng triệu object / lần chạy",
+    "tickerItem3": "pipeline revenue · LTV · churn → BigQuery",
+    "tickerItem4": "team lead · 5 người · 6 tháng"
+  },
+  "About": {
+    "sectionLabel": "Hồ sơ phi hành đoàn",
+    "headingRich": "Một generalist thật sự thích <em>cả hai</em> nửa của stack.",
+    "para1": "Mình là Lâm — full-stack engineer sống ở Hà Nội. Ba năm qua mình xây web product ship đến hàng chục nghìn người, và sáu tháng gần đây còn lead team làm ra chúng.",
+    "para2": "Thứ mình thích nhất là hạ tầng \"không hào nhoáng\" nhưng làm sản phẩm thấy nhanh: image pipeline nuốt hàng triệu object, data platform gộp 21 app thành một bức tranh, dashboard biến raw event thành quyết định.",
+    "cardTitle": "Kế hoạch bay",
+    "cardRoleLabel": "vai trò",
+    "cardRoleValue": "Full-Stack Developer · Team Lead",
+    "cardBasedLabel": "địa bàn",
+    "cardBasedValue": "Hà Nội, Việt Nam",
+    "cardStackLabel": "stack",
+    "cardStackValue": "TS · React · Next · Node · GCP",
+    "cardDegreeLabel": "bằng cấp",
+    "cardDegreeValue": "Kỹ sư, Đại học FPT · 8.02/10",
+    "cardStatusLabel": "trạng thái",
+    "cardStatusValue": "Sẵn sàng quỹ đạo mới",
+    "linkLinkedin": "LinkedIn ↗",
+    "linkEmail": "Email ↗",
+    "linkPhone": "+84 98 406 8859"
+  },
+  "Skills": {
+    "sectionLabel": "Bảng điều khiển",
+    "frontend": {
+      "title": "Frontend",
+      "years": "3 năm",
+      "items": ["React · Next.js", "TypeScript / JavaScript", "Vue.js", "Tailwind · NextUI"]
+    },
+    "backend": {
+      "title": "Backend",
+      "years": "3 năm",
+      "items": ["Node.js · Koa · Express", "NestJS", "Java", "REST · GraphQL · Pub/Sub"]
+    },
+    "cloud": {
+      "title": "Cloud",
+      "years": "2 năm",
+      "items": ["GCP · Cloud Run · Functions", "BigQuery · Pub/Sub · Storage", "AWS · EC2 · S3 · Textract", "Firebase"]
+    },
+    "data": {
+      "title": "Data",
+      "years": "2 năm",
+      "items": ["MySQL · MongoDB · Oracle", "BigQuery warehousing", "Mô hình Revenue · LTV · churn", "OCR (AWS Textract) + Gemini"]
+    },
+    "leadership": {
+      "title": "Leadership & product",
+      "years": "6 tháng",
+      "items": ["Lead team cross-functional (5)", "Lên kế hoạch sản phẩm", "Roadmap & OKRs", "Tuyển dụng & 1:1", "Giao tiếp stakeholder", "Xử lý incident"]
+    }
+  },
+  "Missions": {
+    "sectionLabel": "Nhật ký hành trình",
+    "m3": {
+      "code": "M-03",
+      "date": "10/2024 — Hiện tại",
+      "status": "đang bay",
+      "title": "Avada Group",
+      "titleSub": "· Full-Stack Developer & Team Lead",
+      "lede": "Dẫn dắt team 5 người (2 dev · 1 QA · 1 BA) làm Shopify apps phục vụ tổng cộng hàng chục nghìn merchant.",
+      "bullet1Rich": "<b>Avada SEO Suite</b> (~50k merchant) — xây image optimization pipeline, scale tới <em>hàng triệu ảnh sản phẩm mỗi merchant</em>.",
+      "bullet2Rich": "<b>AP Speed Optimizer</b> — lead từ 0 lên <em>5.000+ active merchant</em>, trung bình <em>~500 merchant mới / tháng</em> suốt sáu tháng liên tiếp.",
+      "bullet3Rich": "<b>Data Analytics Platform</b> — ingest 21 Shopify app vào BigQuery, model revenue, biên lợi nhuận, LTV, churn và tín hiệu khách hàng tiềm năng.",
+      "bullet4Rich": "Cắt chi phí hạ tầng <b>33% ($6k → $4k / tháng)</b>."
+    },
+    "m2": {
+      "code": "M-02",
+      "date": "8/2023 — 9/2024",
+      "status": "đã về",
+      "title": "VNPT Technology",
+      "titleSub": "· Full-Stack Developer",
+      "bullet1Rich": "<b>iOffice</b> — mở rộng nền tảng quản lý văn bản của nhà nước, chạy luồng công văn liên phòng ban, liên tỉnh trên toàn quốc.",
+      "bullet2Rich": "<b>Automation Management System</b> — công cụ nội bộ tự động hóa vận hành thiết bị mạng của VNPT Net."
+    },
+    "m1": {
+      "code": "M-01",
+      "date": "2020 — 2024",
+      "status": "cất cánh",
+      "title": "Đại học FPT",
+      "titleSub": "· Kỹ sư, Kỹ thuật phần mềm",
+      "bodyRich": "Tốt nghiệp loại \"Khá\" · 12/2024 · GPA 8.02/10. Đồ án tốt nghiệp (<em>RecruitMe</em>) được đánh giá xuất sắc và giới thiệu trên kênh chính thức của FPT."
+    }
+  },
+  "Projects": {
+    "sectionLabel": "Danh mục payload",
+    "recruitme": {
+      "tag": "nổi bật · đồ án",
+      "title": "RecruitMe",
+      "desc": "Nền tảng tuyển dụng với generative-AI chấm CV & OCR.",
+      "metaRole": "Team Lead · 5 người",
+      "metaDate": "8 – 12/2024",
+      "previewUrl": "recruitme.app — /candidates/237",
+      "previewFooter": "AI scoring ▸ OCR parse ▸ Shortlist"
+    },
+    "seo": {
+      "tag": "đang bay",
+      "title": "Avada SEO Suite",
+      "desc": "Pipeline tối ưu ảnh ở quy mô triệu object.",
+      "metricNum": "1,2M",
+      "metricLabel": "ảnh xử lý / lần chạy",
+      "metaMerchants": "~50k merchant",
+      "metaCompany": "Avada Group"
+    },
+    "speed": {
+      "tag": "đang bay",
+      "title": "AP Speed Optimizer",
+      "desc": "Zero → 5.000+ merchant trong sáu tháng. Lead sản phẩm + team.",
+      "kpi1Num": "5.142",
+      "kpi1Label": "merchant active",
+      "kpi2Num": "+500",
+      "kpi2Unit": "/tháng",
+      "kpi2Label": "tăng trưởng TB",
+      "metaRole": "Team Lead",
+      "metaDuration": "6 tháng tăng trưởng đều"
+    },
+    "data": {
+      "tag": "nội bộ",
+      "title": "Avada Data Platform",
+      "desc": "21 Shopify app → BigQuery. Revenue, LTV, churn, signals.",
+      "footRich": "<b>-33%</b> chi phí hạ tầng · $6k → $4k / tháng",
+      "metaScope": "Nội bộ",
+      "metaCompany": "Avada Group"
+    }
+  },
+  "Contact": {
+    "sectionLabel": "Kênh liên lạc",
+    "headingRich": "Có nhiệm vụ?<br></br><em>Cùng tìm cửa sổ phóng.</em>",
+    "body": "Mình sẵn sàng với vai trò full-stack full-time, hướng tech lead, và các hợp đồng thú vị — đặc biệt là những thứ có scale thật, data thật, hoặc user thật.",
+    "cta": "Mở kênh liên lạc",
+    "emailLabel": "Email",
+    "phoneLabel": "Điện thoại",
+    "phoneDisplay": "098 406 8859",
+    "linkedinLabel": "LinkedIn",
+    "linkedinDisplay": "lai-ngoc-lam",
+    "addressLabel": "Địa chỉ",
+    "address": "Nghĩa Đô, Cầu Giấy, Hà Nội",
+    "copyright": "© 2026 Lại Ngọc Lâm",
+    "motto": "— per aspera ad astra —",
+    "builtWith": "Built with Next.js, cực nhiều CSS, và một chút trọng lực."
   },
   "LocaleSwitcher": {
     "label": "Ngôn ngữ",
-    "en": "English",
-    "vi": "Tiếng Việt"
+    "en": "EN",
+    "vi": "VI"
   }
 }

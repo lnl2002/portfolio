@@ -45,6 +45,10 @@ yarn-error.log*
 # local tooling
 .claude/settings.local.json
 
+# design handoff artifacts
+/.design-handoff/
+/Portfolio-handoff.zip
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
