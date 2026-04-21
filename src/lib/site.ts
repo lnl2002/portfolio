@@ -1,6 +1,6 @@
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://lainngoclam.com")
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://lai-ngoc-lam.vercel.app/")
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Lại Ngọc Lâm";

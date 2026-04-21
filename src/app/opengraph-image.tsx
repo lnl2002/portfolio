@@ -1,10 +1,12 @@
 import { ImageResponse } from "next/og";
+import { SITE_URL } from "@/lib/site";
 
 export const alt = "Lại Ngọc Lâm — Full-Stack Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OpengraphImage() {
+  const host = SITE_URL.replace(/^https?:\/\//, "").replace(/\/$/, "");
   return new ImageResponse(
     (
       <div
@@ -58,7 +60,7 @@ export default function OpengraphImage() {
           </div>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", fontSize: 22, color: "#8a94a8", letterSpacing: 2, textTransform: "uppercase" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10, fontSize: 22, color: "#8a94a8", letterSpacing: 2, textTransform: "uppercase" }}>
           <div style={{ display: "flex", gap: 32 }}>
             <span>50k+ merchants</span>
             <span style={{ opacity: 0.4 }}>·</span>
@@ -66,7 +68,7 @@ export default function OpengraphImage() {
             <span style={{ opacity: 0.4 }}>·</span>
             <span>5k+ active / 6 mo</span>
           </div>
-          <div style={{ color: "#7aa2ff" }}>lainngoclam.com</div>
+          <div style={{ display: "flex", color: "#7aa2ff" }}>{host}</div>
         </div>
       </div>
     ),
