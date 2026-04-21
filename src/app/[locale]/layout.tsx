@@ -87,6 +87,9 @@ export async function generateMetadata({
     },
     formatDetection: { email: false, telephone: false, address: false },
     referrer: "origin-when-cross-origin",
+    verification: {
+      google: "google932b35139c1a20d4",
+    },
   };
 }
 
