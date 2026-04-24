@@ -19,12 +19,12 @@ export async function Hero() {
             <span className="pulse" />
             <span>{t("availability")}</span>
           </div>
-          <h1 className="hero-title">
+          <h2 className="hero-title">
             {t.rich("titleRich", {
               em: (c) => <em>{c}</em>,
               grad: (c) => <span className="grad">{c}</span>,
             })}
-          </h1>
+          </h2>
           <p className="hero-sub">
             {t.rich("subRich", {
               b: (c) => <strong>{c}</strong>,

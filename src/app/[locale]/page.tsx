@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Missions } from "@/components/sections/Missions";
 import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
+import { SITE_LOCATION, SITE_ROLE } from "@/lib/site";
 
 export default async function Home({
   params,
@@ -16,6 +17,9 @@ export default async function Home({
 
   return (
     <main id="top">
+      <h1 className="sr-only">
+        Lại Ngọc Lâm (Lai Ngoc Lam) — {SITE_ROLE} · {SITE_LOCATION}
+      </h1>
       <Hero />
       <About />
       <Skills />
