@@ -1,141 +1,52 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { Arrow } from "@/components/Arrow";
+import { CV_PATH, SITE_EMAIL } from "@/lib/site";
+import portrait from "../../../public/media/portrait-suit-cutout.png";
+import speedIcon from "../../../public/media/speed-icon.png";
+import aeoIcon from "../../../public/media/aeo-icon.png";
+import seoIcon from "../../../public/media/seo-icon.png";
+
+const ICONS = { speed: speedIcon, aeo: aeoIcon, seo: seoIcon } as const;
+type Proof = { name: string; rating: string; icon: keyof typeof ICONS };
 
 export async function Hero() {
   const t = await getTranslations("Hero");
+  const proof = t.raw("proof") as Proof[];
 
   return (
-    <section className="hero">
-      <div className="hero-coords">
-        <span>{t("coordsLat")}</span>
-        <span className="dot" />
-        <span>{t("coordsLng")}</span>
-        <span className="dot" />
-        <span>{t("coordsPlace")}</span>
-      </div>
-
-      <div className="hero-grid">
-        <div className="hero-copy">
-          <div className="eyebrow">
-            <span className="pulse" />
-            <span>{t("availability")}</span>
+    <section className="hero" aria-labelledby="hero-h">
+      <div className="wrap hero__grid">
+        <div className="hero__copy">
+          <p className="hero__sign"><b>Lại Ngọc Lâm</b> · {t("sign")}</p>
+          <h1 id="hero-h">
+            {t("titleStart")}<em>{t("titleEm")}</em>{t("titleEnd")}
+          </h1>
+          <p className="hero__lead">{t("lead")}</p>
+          <div className="row">
+            <a className="btn btn--blue" href={`mailto:${SITE_EMAIL}`}>{t("ctaEmail")}<Arrow /></a>
+            <a className="btn btn--line" href={CV_PATH} download>{t("ctaCv")}</a>
           </div>
-          <h2 className="hero-title">
-            {t.rich("titleRich", {
-              em: (c) => <em>{c}</em>,
-              grad: (c) => <span className="grad">{c}</span>,
-            })}
-          </h2>
-          <p className="hero-sub">
-            {t.rich("subRich", {
-              b: (c) => <strong>{c}</strong>,
-            })}
-          </p>
-
-          <div className="hero-cta">
-            <a className="btn btn-primary" href="#projects">
-              <span>{t("seeMissions")}</span>
-              <svg viewBox="0 0 24 24" width="16" height="16">
-                <path
-                  d="M5 12h14m-5-5 5 5-5 5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
-            <a className="btn btn-outline" href={`mailto:${t("email")}`}>
-              {t("email")}
-            </a>
-            <a className="btn btn-ghost" href="/Lai_Ngoc_Lam_CV.pdf" download>
-              <span>{t("downloadCv")}</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden>
-                <path
-                  d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <div className="hero-stats">
-            <div>
-              <b>
-                {t("statYearsNum")}
-                <span>{t("statYearsUnit")}</span>
-              </b>
-              <em>{t("statYearsLabel")}</em>
-            </div>
-            <div>
-              <b>{t("statMerchantsNum")}</b>
-              <em>{t("statMerchantsLabel")}</em>
-            </div>
-            <div>
-              <b>{t("statInfraNum")}</b>
-              <em>{t("statInfraLabel")}</em>
-            </div>
-            <div>
-              <b>{t("statInstallsNum")}</b>
-              <em>{t("statInstallsLabel")}</em>
-            </div>
-          </div>
+          <ul className="proof" aria-label={t("proofLabel")}>
+            {proof.map((p) => (
+              <li key={p.name}>
+                <Image src={ICONS[p.icon]} alt="" width={40} height={40} />
+                <b>{p.name}</b>
+                <span>{p.rating}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        <div className="orbit">
-          <div className="orbit-ring r1" />
-          <div className="orbit-ring r2" />
-          <div className="orbit-ring r3" />
-          <div className="orbit-ring r4" />
-
-          <div className="planet">
-            <div className="planet-core">
-              <div className="planet-shade" />
-              <div className="planet-label">
-                <span>{t("planetLabelSpan")}</span>
-                <em>{t("planetLabelEm")}</em>
-              </div>
-            </div>
-          </div>
-
-          <div className="satellite s1">
-            <span>React</span>
-          </div>
-          <div className="satellite s2">
-            <span>Node</span>
-          </div>
-          <div className="satellite s3">
-            <span>Next.js</span>
-          </div>
-          <div className="satellite s4">
-            <span>GCP</span>
-          </div>
-          <div className="satellite s5">
-            <span>TS</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="hero-ticker" aria-hidden>
-        <div className="ticker-track">
-          {[0, 1].flatMap((pass) =>
-            [
-              <span key={`log-${pass}`}>{t("tickerLog")}</span>,
-              <span key={`s1a-${pass}`}>★</span>,
-              <span key={`i1-${pass}`}>{t("tickerItem1")}</span>,
-              <span key={`s2a-${pass}`}>★</span>,
-              <span key={`i2-${pass}`}>{t("tickerItem2")}</span>,
-              <span key={`s3a-${pass}`}>★</span>,
-              <span key={`i3-${pass}`}>{t("tickerItem3")}</span>,
-              <span key={`s4a-${pass}`}>★</span>,
-              <span key={`i4-${pass}`}>{t("tickerItem4")}</span>,
-              <span key={`s5a-${pass}`}>★</span>,
-            ]
-          )}
+        <div className="hero__media">
+          <div className="hero__panel" aria-hidden="true" />
+          <Image
+            className="hero__photo"
+            src={portrait}
+            alt={t("photoAlt")}
+            sizes="(max-width: 719px) 90vw, 512px"
+            preload
+          />
+          <p className="hero__tag"><b>{t("tagTitle")}</b>{t("tagText")}</p>
         </div>
       </div>
     </section>

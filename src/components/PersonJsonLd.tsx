@@ -27,7 +27,7 @@ export function PersonJsonLd({ locale }: { locale: string }) {
     jobTitle: SITE_ROLE,
     url: SITE_URL,
     mainEntityOfPage: SITE_URL,
-    image: `${SITE_URL}/avatar.jpg`,
+    image: `${SITE_URL}/media/portrait-suit.jpg`,
     email: `mailto:${SITE_EMAIL}`,
     telephone: SITE_PHONE,
     nationality: { "@type": "Country", name: "Vietnam" },
@@ -47,7 +47,9 @@ export function PersonJsonLd({ locale }: { locale: string }) {
       "Shopify apps",
       "Google Cloud Platform",
       "BigQuery",
-      "Data analytics",
+      "Shopify SEO",
+      "Site speed optimization",
+      "AI-assisted development",
     ],
     knowsLanguage: [
       { "@type": "Language", name: "Vietnamese", alternateName: "vi" },
@@ -62,7 +64,7 @@ export function PersonJsonLd({ locale }: { locale: string }) {
       name: "FPT University",
       url: "https://daihoc.fpt.edu.vn",
     },
-    description: `Lại Ngọc Lâm (Lai Ngoc Lam) — ${SITE_ROLE} based in ${SITE_LOCATION}. Three years shipping products to 50,000+ merchants; six months leading a five-person team across Shopify apps, data platforms, and performance tooling.`,
+    description: `Lại Ngọc Lâm (Lai Ngoc Lam) — ${SITE_ROLE} at Avada Group, based in ${SITE_LOCATION}. 3+ years full-stack, nearly 2 years building Shopify apps at scale; leads a five-person team.`,
     inLanguage: locale,
   };
 

@@ -1,213 +1,94 @@
 {
   "Metadata": {
-    "title": "Lại Ngọc Lâm (Lai Ngoc Lam) — Full-Stack Developer",
-    "description": "Lại Ngọc Lâm (Lai Ngoc Lam) — Full-Stack Developer from Hanoi, Vietnam. Shipping products to tens of thousands of merchants; Shopify apps, data platforms, and the occasional orbital maneuver."
+    "title": "Lại Ngọc Lâm (Lai Ngoc Lam) — Tech Lead, Full-Stack Engineer",
+    "description": "Lại Ngọc Lâm (Lai Ngoc Lam) — Tech Lead at Avada Group, Hanoi. 3+ years full-stack, nearly 2 years building Shopify apps at scale: AP Speed Optimizer (5,000+ active merchants), Avada AEO SEO Optimizer and Avada SEO Suite."
   },
   "Nav": {
-    "brandName": "Lại Ngọc Lâm",
-    "brandRole": "Full-Stack Developer · HAN",
-    "about": "About",
-    "stack": "Stack",
-    "missions": "Missions",
-    "projects": "Projects",
-    "contact": "Contact",
-    "themeToggleLabel": "Toggle theme",
-    "themeToggleTitle": "Toggle day / night",
-    "letsTalk": "Let's talk →"
+    "story": "How we work",
+    "work": "Products",
+    "results": "Results",
+    "career": "Career",
+    "email": "Email Lâm",
+    "home": "Lại Ngọc Lâm, back to top",
+    "skip": "Skip to content",
+    "main": "Main"
   },
   "Hero": {
-    "coordsLat": "LAT 21.0370° N",
-    "coordsLng": "LNG 105.7983° E",
-    "coordsPlace": "HANOI · VIETNAM",
-    "availability": "Available · Q2 2026",
-    "titleRich": "Building software <em>at</em> the <grad>speed of light</grad>, grounded on Earth.",
-    "subRich": "Full-stack engineer — 3 years shipping products that serve <b>50,000+ merchants</b>, plus 6 months leading a 5-person crew across Shopify apps, data platforms, and the occasional orbital maneuver.",
-    "seeMissions": "See the missions",
-    "downloadCv": "Download CV",
-    "email": "laingoclam3112@gmail.com",
-    "statYearsNum": "3",
-    "statYearsUnit": "y",
-    "statYearsLabel": "experience",
-    "statMerchantsNum": "50k+",
-    "statMerchantsLabel": "merchants served",
-    "statInfraNum": "33%",
-    "statInfraLabel": "infra cost cut",
-    "statInstallsNum": "5k+",
-    "statInstallsLabel": "active merchants / 6mo",
-    "planetLabelSpan": "LNL",
-    "planetLabelEm": "sol · iii",
-    "tickerLog": "// mission_log",
-    "tickerItem1": "shipping to ~50k shopify merchants",
-    "tickerItem2": "bulk image optimization at million-object scale",
-    "tickerItem3": "revenue · LTV · churn pipelines → BigQuery",
-    "tickerItem4": "team lead · 5 people · 6 months"
+    "sign": "Tech Lead at Avada Group · Hanoi",
+    "titleStart": "I lead a team building Shopify apps that ",
+    "titleEm": "thousands of merchants",
+    "titleEnd": " run their stores on.",
+    "lead": "3+ years as a full-stack engineer, nearly 2 of them on Shopify apps at scale. Tech Lead since January 2026, with a team of five: two developers, a QA and a BA.",
+    "ctaEmail": "Email Lâm",
+    "ctaCv": "Download the CV",
+    "proofLabel": "Shopify App Store ratings",
+    "proof": [
+      { "name": "AP Speed Optimizer", "rating": "5.0 from 762 reviews", "icon": "speed" },
+      { "name": "Avada AEO", "rating": "5.0 from 397 reviews", "icon": "aeo" },
+      { "name": "Avada SEO Suite", "rating": "4.9 from 4,691 reviews", "icon": "seo" }
+    ],
+    "tagTitle": "Outstanding Employee",
+    "tagText": "Avada Group, Q3 2025",
+    "photoAlt": "Lại Ngọc Lâm in a navy three-piece suit, seated"
   },
-  "About": {
-    "sectionLabel": "Crew dossier",
-    "headingRich": "A generalist who actually likes <em>both</em> halves of the stack.",
-    "para1": "I'm Lâm — a full-stack engineer based in Hanoi. For the last three years I've been building web products that ship to tens of thousands of people, and for the last six months I've also been leading the team that builds them.",
-    "para2": "My favorite kind of work is the unglamorous infrastructure that makes a product feel fast: image pipelines that chew through millions of objects, data platforms that stitch 21 apps into one view, dashboards that turn raw events into decisions.",
-    "cardTitle": "Flight plan",
-    "cardRoleLabel": "role",
-    "cardRoleValue": "Full-Stack Developer · Team Lead",
-    "cardBasedLabel": "based",
-    "cardBasedValue": "Hanoi, Vietnam",
-    "cardStackLabel": "stack",
-    "cardStackValue": "TS · React · Next · Node · GCP",
-    "cardDegreeLabel": "degree",
-    "cardDegreeValue": "B.Eng, FPT University · 8.024/10",
-    "cardStatusLabel": "status",
-    "cardStatusValue": "Open to new orbits",
-    "linkLinkedin": "LinkedIn ↗",
-    "linkEmail": "Email ↗",
-    "linkPhone": "+84 98 406 8859",
-    "linkCv": "Download CV ↓",
-    "avatarAlt": "Portrait of Lại Ngọc Lâm"
+  "Story": {
+    "label": "How the team works",
+    "heading": "Four habits behind the results.",
+    "ledeStart": "I joined Avada Group as a full-stack developer in March 2025 and became ",
+    "ledeStrong": "Tech Lead in January 2026",
+    "ledeEnd": ". I set the roadmap with the business, make the technical calls and coach the people who ship the work.",
+    "rules": [
+      { "title": "We start from the market and end with the numbers", "text": "Market research, pricing input and solution design up front; outcomes measured and reported after launch." },
+      { "title": "We treat cloud cost as a feature", "text": "AP Speed Optimizer now runs on over 60% less infrastructure; the SEO Suite image pipeline on half." },
+      { "title": "We put AI into the workflow", "text": "An auto bug-fix bot and automated code review, plus team training on AI-assisted development." },
+      { "title": "We grow the people who ship", "text": "Mentoring, a clear technical direction and code review standards the whole team holds." }
+    ]
   },
-  "Skills": {
-    "sectionLabel": "Instrument panel",
-    "frontend": {
-      "title": "Frontend",
-      "years": "3y",
-      "items": ["React · Next.js", "TypeScript / JavaScript", "Vue.js", "Tailwind · NextUI"]
-    },
-    "backend": {
-      "title": "Backend",
-      "years": "3y",
-      "items": ["Node.js · Koa · Express", "NestJS", "TypeScript APIs", "Java"]
-    },
-    "cloud": {
-      "title": "Cloud",
-      "years": "2y",
-      "items": ["GCP · Cloud Run · Functions", "BigQuery · Pub/Sub · Storage", "AWS · EC2 · S3 · Textract", "Firebase"]
-    },
-    "data": {
-      "title": "Data",
-      "years": "2y",
-      "items": ["MySQL · MongoDB · Oracle", "BigQuery warehousing", "Revenue · LTV · churn models", "OCR (AWS Textract) + Gemini"]
-    },
-    "leadership": {
-      "title": "Leadership & product",
-      "years": "6mo",
-      "items": ["Cross-functional team lead (5)", "Product planning", "Technical direction", "Personnel management"]
-    }
+  "Work": {
+    "label": "Products",
+    "heading": "Products the team ships.",
+    "aside": "Three live Shopify apps, all Built for Shopify, and the graduation project that started it.",
+    "roleLabel": "My role:",
+    "items": [
+      { "key": "speed", "name": "AP Speed Optimizer", "badge": "#2 for “speed”", "text": "Grew from almost scratch to 5,000+ active merchants, about 500 new each month, with revenue up every month since April 2026.", "role": "technical owner, roadmap and the Speed Expert service", "url": "https://apps.shopify.com/ap-speed-optimizer", "alt": "AP Speed Optimizer screen with a speed score gauge and image compression" },
+      { "key": "aeo", "name": "Avada AEO SEO Optimizer", "badge": "#1 for “aeo”", "text": "Measures how often ChatGPT, Gemini and Claude mention each store, and where it ranks in Shopify Catalog.", "role": "tech lead for prompt and Catalog tracking", "url": "https://apps.shopify.com/aeo-llms-txt", "alt": "Avada AEO screen for choosing which AI bots can read a store" },
+      { "key": "seo", "name": "Avada SEO Suite", "badge": "~50,000 merchants", "text": "A bulk image pipeline for hundreds of thousands to millions of product images per merchant, on half the old cloud cost.", "role": "full-stack developer on the image pipeline", "url": "https://apps.shopify.com/avada-seo-suite", "alt": "Avada SEO Suite speed settings beside a web performance score of 86" },
+      { "key": "recruitme", "name": "RecruitMe", "badge": "FPT University, 2024", "text": "AI recruitment platform with OCR CV parsing and AI CV scoring; an outstanding graduation project, featured in FPT University's news.", "role": "graduation project, Software Engineering", "url": "https://daihoc.fpt.edu.vn/hoc-thuat-2/recruitme-giai-phap-tu-dong-hoa-tuyen-dung-cua-sinh-vien-truong-dai-hoc-fpt/", "alt": "Lâm in cap and gown at the FPT University graduation ceremony" }
+    ]
   },
-  "Missions": {
-    "sectionLabel": "Mission log",
-    "m3": {
-      "code": "M-03",
-      "date": "Oct 2024 — Present",
-      "status": "in orbit",
-      "title": "Avada Group",
-      "titleSub": "· Full-Stack Developer & Team Lead",
-      "lede": "Leading a 5-person crew (2 dev · 1 QA · 1 BA) on Shopify apps that collectively serve tens of thousands of merchants.",
-      "bullet1Rich": "<b>Avada SEO Suite</b> (~50k merchants) — built a bulk image optimization pipeline that scales to <em>millions of product images per merchant</em>.",
-      "bullet2Rich": "<b>AP Speed Optimizer</b> — led from zero to <em>5,000+ active merchants</em>, averaging <em>~500 new merchants / month</em> for six consecutive months.",
-      "bullet3Rich": "<b>Data Analytics Platform</b> — ingested 21 Shopify apps into BigQuery, modeling revenue, margin, LTV, churn and high-potential-customer signals.",
-      "bullet4Rich": "Cut infrastructure cost <b>33% ($6k → $4k / mo)</b>."
-    },
-    "m2": {
-      "code": "M-02",
-      "date": "Aug 2023 — Sep 2024",
-      "status": "recovered",
-      "title": "VNPT Technology",
-      "titleSub": "· Full-Stack Developer",
-      "bullet1Rich": "<b>iOffice</b> — extended a government document-management platform powering inter-department and cross-provincial workflows nationwide.",
-      "bullet2Rich": "<b>Automation Management System</b> — built an internal tool automating VNPT Net's network device operations."
-    },
-    "m1": {
-      "code": "M-01",
-      "date": "2020 — 2024",
-      "status": "launched",
-      "title": "FPT University",
-      "titleSub": "· B.Eng, Software Engineering",
-      "bodyRich": "Graduated with \"Good\" classification, Dec 2024 · GPA 8.024/10. Graduation project (<em>RecruitMe</em>) recognized as outstanding and featured in FPT's official news and Facebook channels."
-    }
+  "Results": {
+    "label": "Results",
+    "heading": "What the work changed, in numbers.",
+    "stats": [
+      { "num": "5,000+", "text": "active merchants on AP Speed Optimizer" },
+      { "num": "60%+", "text": "lower infrastructure cost on AP Speed Optimizer" },
+      { "num": "#1", "text": "for “aeo” on the Shopify App Store" },
+      { "num": "25%", "text": "conversion lift, at best, for stores using Speed Expert" }
+    ],
+    "note": "Ratings and ranks from the Shopify App Store listings; the other figures from Lâm's CV."
   },
-  "Projects": {
-    "sectionLabel": "Payload manifest",
-    "recruitme": {
-      "tag": "featured · graduation",
-      "title": "RecruitMe",
-      "desc": "AI-powered recruitment platform — OCR CV parsing (AWS Textract) and generative-AI scoring (Gemini). Graduation thesis recognized as outstanding and featured in FPT University's official news + Facebook channels.",
-      "metaRole": "Team Lead · 5 people",
-      "metaDate": "Aug – Dec 2024",
-      "previewUrl": "recruitme.app — /pipeline",
-      "previewFooter": "Upload ▸ Textract OCR ▸ Gemini score ▸ Shortlist",
-      "featuredBadge": "Featured · FPT University News",
-      "pipelineStep1Title": "CV upload",
-      "pipelineStep1Meta": "PDF · DOCX · image",
-      "pipelineStep2Title": "OCR extract",
-      "pipelineStep2Meta": "AWS Textract",
-      "pipelineStep3Title": "AI scoring",
-      "pipelineStep3Meta": "Gemini · role-fit",
-      "pressClipLabel": "FPT University · Graduation 2025",
-      "pressTitle": "RecruitMe — AI-powered recruitment automation, by FPT University students",
-      "pressSource": "daihoc.fpt.edu.vn",
-      "pressCategory": "Học thuật",
-      "pressDate": "06 Jan 2026",
-      "pressCta": "Read the article",
-      "pressUrl": "https://daihoc.fpt.edu.vn/hoc-thuat-2/recruitme-giai-phap-tu-dong-hoa-tuyen-dung-cua-sinh-vien-truong-dai-hoc-fpt/"
-    },
-    "seo": {
-      "tag": "in orbit",
-      "title": "Avada SEO Suite",
-      "desc": "Built the image-optimization pipeline — one slice of a broader SEO suite serving ~50k Shopify stores, some with hundreds of thousands to millions of product images each.",
-      "metricNum": "50k",
-      "metricLabel": "stores served · up to millions of images each",
-      "pipe1": "PRODUCT IMG",
-      "pipe2": "COMPRESS",
-      "pipe2Sub": "webp · avif",
-      "pipe3": "CDN",
-      "pipe4": "STORE",
-      "metaMerchants": "~50k merchants",
-      "metaCompany": "Avada Group"
-    },
-    "speed": {
-      "tag": "in orbit",
-      "title": "AP Speed Optimizer",
-      "desc": "Zero → 5,000+ merchants in six months. Led product + crew.",
-      "kpi1Num": "5,000+",
-      "kpi1Label": "active merchants",
-      "kpi2Num": "+500",
-      "kpi2Unit": "/mo",
-      "kpi2Label": "avg growth",
-      "eqMultiplierNum": "6",
-      "eqMultiplierUnit": " mo",
-      "eqMultiplierLabel": "consecutive",
-      "metaRole": "Team Lead",
-      "metaDuration": "6 mo sustained growth"
-    },
-    "data": {
-      "tag": "internal",
-      "title": "Avada Data Platform",
-      "desc": "21 Shopify apps → BigQuery. Revenue, LTV, churn, signals.",
-      "outLabel": "outputs",
-      "out1": "revenue",
-      "out2": "margin",
-      "out3": "LTV",
-      "out4": "churn",
-      "out5": "signals",
-      "footRich": "<b>-33%</b> infra cost · $6k → $4k / mo",
-      "metaScope": "Internal",
-      "metaCompany": "Avada Group"
-    }
+  "Career": {
+    "label": "Career",
+    "heading": "From FPT University to tech lead.",
+    "items": [
+      { "year": "2026", "title": "Tech Lead · Avada Group", "text": "Promoted in January, six months into full-time work. Leads a team of five." },
+      { "year": "2025", "title": "Outstanding Employee, Q3 · Avada Group", "text": "Outstanding Employee of the Quarter for Q3 2025." },
+      { "year": "2025", "title": "Full Stack Developer · Avada Group", "text": "React, Koa, Firebase, Cloud Run, BigQuery and Pub/Sub on three Shopify apps." },
+      { "year": "2023", "title": "Full Stack Developer · VNPT Technology", "text": "IOFFICE, a document system for public agencies, and a network automation tool." },
+      { "year": "2020", "title": "Software Engineering · FPT University", "text": "Bachelor's degree, 2020 to 2024, GPA 8.02 of 10." }
+    ],
+    "photoAlt": "Lâm on a sandy beach holding a coconut, the sea behind him"
   },
   "Contact": {
-    "sectionLabel": "Open comms",
-    "headingRich": "Got a mission?<br></br><em>Let's find its launch window.</em>",
-    "body": "I'm open to full-time full-stack roles, tech-lead tracks, and interesting contract work — especially anything involving real scale, real data, or real users.",
-    "cta": "Open comms channel",
-    "emailLabel": "Email",
-    "phoneLabel": "Phone",
-    "phoneDisplay": "098 406 8859",
-    "linkedinLabel": "LinkedIn",
-    "linkedinDisplay": "lai-ngoc-lam",
-    "addressLabel": "Address",
-    "address": "Nghĩa Đô, Cầu Giấy, Hà Nội",
-    "copyright": "© 2026 Lại Ngọc Lâm",
-    "motto": "— per aspera ad astra —",
-    "builtWith": "Built with Next.js, a lot of CSS, and a small amount of gravity."
+    "label": "Contact",
+    "heading": "Let's talk about your product team.",
+    "lede": "Open to tech lead and senior full-stack roles, Shopify apps, site speed and AI-assisted engineering. Based in Cầu Giấy, Hanoi.",
+    "cv": "Download the CV",
+    "linkedin": "Open LinkedIn"
+  },
+  "Footer": {
+    "rights": "Tech Lead, Avada Group",
+    "label": "Footer"
   },
   "LocaleSwitcher": {
     "label": "Language",

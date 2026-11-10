@@ -3,7 +3,7 @@ export const SITE_URL = (
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Lại Ngọc Lâm";
-export const SITE_ROLE = "Full-Stack Developer";
+export const SITE_ROLE = "Tech Lead, Full-Stack Engineer";
 export const SITE_LOCATION = "Hanoi, Vietnam";
 export const SITE_EMAIL = "laingoclam3112@gmail.com";
 export const SITE_PHONE = "+84984068859";
@@ -26,3 +26,5 @@ export const DEFAULT_LOCALE: (typeof SITE_LOCALES)[number] = "en";
 export function localeUrl(locale: string) {
   return locale === DEFAULT_LOCALE ? SITE_URL : `${SITE_URL}/${locale}`;
 }
+
+export const CV_PATH = "/Lai_Ngoc_Lam_CV.pdf";

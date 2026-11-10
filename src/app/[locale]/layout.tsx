@@ -3,11 +3,10 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Backgrounds } from "@/components/Backgrounds";
 import { LangSync } from "@/components/LangSync";
 import { Nav } from "@/components/Nav";
 import { PersonJsonLd, WebsiteJsonLd } from "@/components/PersonJsonLd";
-import { RevealOnScroll } from "@/components/RevealOnScroll";
+import { Footer } from "@/components/Footer";
 import { DEFAULT_LOCALE, SITE_NAME, SITE_URL, localeUrl } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -43,6 +42,7 @@ export async function generateMetadata({
     keywords: [
       "Lại Ngọc Lâm",
       "Lai Ngoc Lam",
+      "tech lead",
       "full-stack developer",
       "Hanoi developer",
       "Vietnam developer",
@@ -111,10 +111,9 @@ export default async function LocaleLayout({
       <LangSync />
       <PersonJsonLd locale={locale} />
       {locale === DEFAULT_LOCALE ? <WebsiteJsonLd /> : null}
-      <Backgrounds />
       <Nav />
       {children}
-      <RevealOnScroll />
+      <Footer />
     </NextIntlClientProvider>
   );
 }

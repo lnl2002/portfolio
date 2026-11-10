@@ -1,213 +1,94 @@
 {
   "Metadata": {
-    "title": "Lại Ngọc Lâm (Lai Ngoc Lam) — Lập trình viên Full-Stack",
-    "description": "Lại Ngọc Lâm (Lai Ngoc Lam) — Lập trình viên Full-Stack tại Hà Nội. Ship sản phẩm tới hàng chục nghìn merchant; Shopify apps, data platforms, và đôi khi vài cú bẻ lái quỹ đạo."
+    "title": "Lại Ngọc Lâm (Lai Ngoc Lam) — Tech Lead, Kỹ sư Full-Stack",
+    "description": "Lại Ngọc Lâm (Lai Ngoc Lam) — Tech Lead tại Avada Group, Hà Nội. Hơn 3 năm full-stack, gần 2 năm xây Shopify app quy mô lớn: AP Speed Optimizer (5.000+ merchant đang dùng), Avada AEO SEO Optimizer và Avada SEO Suite."
   },
   "Nav": {
-    "brandName": "Lại Ngọc Lâm",
-    "brandRole": "Full-Stack Developer · HAN",
-    "about": "Giới thiệu",
-    "stack": "Stack",
-    "missions": "Hành trình",
-    "projects": "Dự án",
-    "contact": "Liên hệ",
-    "themeToggleLabel": "Đổi theme",
-    "themeToggleTitle": "Chuyển ngày / đêm",
-    "letsTalk": "Bắt chuyện →"
+    "story": "Cách team làm việc",
+    "work": "Sản phẩm",
+    "results": "Kết quả",
+    "career": "Sự nghiệp",
+    "email": "Gửi email cho Lâm",
+    "home": "Lại Ngọc Lâm, về đầu trang",
+    "skip": "Bỏ qua để tới nội dung",
+    "main": "Điều hướng chính"
   },
   "Hero": {
-    "coordsLat": "LAT 21.0370° B",
-    "coordsLng": "LNG 105.7983° Đ",
-    "coordsPlace": "HÀ NỘI · VIỆT NAM",
-    "availability": "Đang rảnh · Q2 2026",
-    "titleRich": "Làm phần mềm <em>với</em> <grad>vận tốc ánh sáng</grad>, nhưng chân vẫn trên mặt đất.",
-    "subRich": "Full-stack engineer — 3 năm ship sản phẩm cho <b>50.000+ merchant</b>, 6 tháng lead team 5 người làm Shopify apps, data platform, và thi thoảng vài cú bẻ lái quỹ đạo.",
-    "seeMissions": "Xem hành trình",
-    "downloadCv": "Tải CV",
-    "email": "laingoclam3112@gmail.com",
-    "statYearsNum": "3",
-    "statYearsUnit": "năm",
-    "statYearsLabel": "kinh nghiệm",
-    "statMerchantsNum": "50k+",
-    "statMerchantsLabel": "merchant phục vụ",
-    "statInfraNum": "33%",
-    "statInfraLabel": "cắt giảm hạ tầng",
-    "statInstallsNum": "5k+",
-    "statInstallsLabel": "merchant active / 6 tháng",
-    "planetLabelSpan": "LNL",
-    "planetLabelEm": "sol · iii",
-    "tickerLog": "// mission_log",
-    "tickerItem1": "ship cho ~50k merchant shopify",
-    "tickerItem2": "tối ưu ảnh hàng triệu object / lần chạy",
-    "tickerItem3": "pipeline revenue · LTV · churn → BigQuery",
-    "tickerItem4": "team lead · 5 người · 6 tháng"
+    "sign": "Tech Lead tại Avada Group · Hà Nội",
+    "titleStart": "Tôi dẫn dắt team xây dựng Shopify app mà ",
+    "titleEm": "hàng nghìn merchant",
+    "titleEnd": " đang dùng để vận hành cửa hàng.",
+    "lead": "Hơn 3 năm làm kỹ sư full-stack, gần 2 năm trong đó xây Shopify app quy mô lớn. Tech Lead từ tháng 1/2026, dẫn dắt team 5 người: 2 developer, 1 QA và 1 BA.",
+    "ctaEmail": "Gửi email cho Lâm",
+    "ctaCv": "Tải CV",
+    "proofLabel": "Đánh giá trên Shopify App Store",
+    "proof": [
+      { "name": "AP Speed Optimizer", "rating": "5.0 từ 762 đánh giá", "icon": "speed" },
+      { "name": "Avada AEO", "rating": "5.0 từ 397 đánh giá", "icon": "aeo" },
+      { "name": "Avada SEO Suite", "rating": "4.9 từ 4.691 đánh giá", "icon": "seo" }
+    ],
+    "tagTitle": "Nhân viên xuất sắc",
+    "tagText": "Avada Group, quý 3/2025",
+    "photoAlt": "Lại Ngọc Lâm mặc bộ vest ba mảnh màu xanh navy, ngồi trên ghế"
   },
-  "About": {
-    "sectionLabel": "Hồ sơ phi hành đoàn",
-    "headingRich": "Một generalist thật sự thích <em>cả hai</em> nửa của stack.",
-    "para1": "Mình là Lâm — full-stack engineer sống ở Hà Nội. Ba năm qua mình xây web product ship đến hàng chục nghìn người, và sáu tháng gần đây còn lead team làm ra chúng.",
-    "para2": "Thứ mình thích nhất là hạ tầng \"không hào nhoáng\" nhưng làm sản phẩm thấy nhanh: image pipeline nuốt hàng triệu object, data platform gộp 21 app thành một bức tranh, dashboard biến raw event thành quyết định.",
-    "cardTitle": "Kế hoạch bay",
-    "cardRoleLabel": "vai trò",
-    "cardRoleValue": "Full-Stack Developer · Team Lead",
-    "cardBasedLabel": "địa bàn",
-    "cardBasedValue": "Hà Nội, Việt Nam",
-    "cardStackLabel": "stack",
-    "cardStackValue": "TS · React · Next · Node · GCP",
-    "cardDegreeLabel": "bằng cấp",
-    "cardDegreeValue": "Kỹ sư, Đại học FPT · 8.024/10",
-    "cardStatusLabel": "trạng thái",
-    "cardStatusValue": "Sẵn sàng quỹ đạo mới",
-    "linkLinkedin": "LinkedIn ↗",
-    "linkEmail": "Email ↗",
-    "linkPhone": "+84 98 406 8859",
-    "linkCv": "Tải CV ↓",
-    "avatarAlt": "Ảnh chân dung Lại Ngọc Lâm"
+  "Story": {
+    "label": "Cách team làm việc",
+    "heading": "Bốn thói quen làm nên kết quả.",
+    "ledeStart": "Tôi vào Avada Group tháng 3/2025 với vai trò full-stack developer và trở thành ",
+    "ledeStrong": "Tech Lead từ tháng 1/2026",
+    "ledeEnd": ". Tôi cùng phía kinh doanh lên roadmap, đưa ra các quyết định kỹ thuật và kèm cặp những người trực tiếp làm sản phẩm.",
+    "rules": [
+      { "title": "Bắt đầu từ thị trường, kết thúc bằng con số", "text": "Nghiên cứu thị trường, góp ý giá và thiết kế giải pháp từ đầu; đo lường và báo cáo kết quả sau khi ra mắt." },
+      { "title": "Coi chi phí cloud là một tính năng", "text": "AP Speed Optimizer giờ chạy với chi phí hạ tầng giảm hơn 60%; pipeline ảnh của SEO Suite giảm một nửa." },
+      { "title": "Đưa AI vào quy trình làm việc", "text": "Bot tự sửa bug và review code tự động, cùng các buổi đào tạo team về phát triển phần mềm có AI hỗ trợ." },
+      { "title": "Phát triển những người làm ra sản phẩm", "text": "Kèm cặp, định hướng kỹ thuật rõ ràng và chuẩn review code mà cả team cùng giữ." }
+    ]
   },
-  "Skills": {
-    "sectionLabel": "Bảng điều khiển",
-    "frontend": {
-      "title": "Frontend",
-      "years": "3 năm",
-      "items": ["React · Next.js", "TypeScript / JavaScript", "Vue.js", "Tailwind · NextUI"]
-    },
-    "backend": {
-      "title": "Backend",
-      "years": "3 năm",
-      "items": ["Node.js · Koa · Express", "NestJS", "TypeScript APIs", "Java"]
-    },
-    "cloud": {
-      "title": "Cloud",
-      "years": "2 năm",
-      "items": ["GCP · Cloud Run · Functions", "BigQuery · Pub/Sub · Storage", "AWS · EC2 · S3 · Textract", "Firebase"]
-    },
-    "data": {
-      "title": "Data",
-      "years": "2 năm",
-      "items": ["MySQL · MongoDB · Oracle", "BigQuery warehousing", "Mô hình Revenue · LTV · churn", "OCR (AWS Textract) + Gemini"]
-    },
-    "leadership": {
-      "title": "Leadership & product",
-      "years": "6 tháng",
-      "items": ["Lead team cross-functional (5)", "Lên kế hoạch sản phẩm", "Định hướng kỹ thuật", "Quản lý nhân sự"]
-    }
+  "Work": {
+    "label": "Sản phẩm",
+    "heading": "Sản phẩm team đã làm ra.",
+    "aside": "Ba Shopify app đang chạy, đều đạt Built for Shopify, cùng đồ án tốt nghiệp nơi mọi thứ bắt đầu.",
+    "roleLabel": "Vai trò của tôi:",
+    "items": [
+      { "key": "speed", "name": "AP Speed Optimizer", "badge": "#2 cho “speed”", "text": "Từ gần như con số 0 lên 5.000+ merchant đang hoạt động, khoảng 500 merchant mới mỗi tháng, doanh thu tăng đều mỗi tháng từ tháng 4/2026.", "role": "technical owner, roadmap và dịch vụ Speed Expert", "url": "https://apps.shopify.com/ap-speed-optimizer", "alt": "Màn hình AP Speed Optimizer với đồng hồ điểm tốc độ và nén ảnh" },
+      { "key": "aeo", "name": "Avada AEO SEO Optimizer", "badge": "#1 cho “aeo”", "text": "Đo mức độ ChatGPT, Gemini và Claude nhắc tới từng cửa hàng, cùng thứ hạng của cửa hàng trên Shopify Catalog.", "role": "tech lead mảng theo dõi prompt và Catalog", "url": "https://apps.shopify.com/aeo-llms-txt", "alt": "Màn hình Avada AEO để chọn những bot AI được đọc cửa hàng" },
+      { "key": "seo", "name": "Avada SEO Suite", "badge": "~50.000 merchant", "text": "Pipeline tối ưu ảnh hàng loạt, xử lý từ hàng trăm nghìn tới hàng triệu ảnh sản phẩm mỗi merchant, với chi phí cloud chỉ còn một nửa.", "role": "full-stack developer cho pipeline ảnh", "url": "https://apps.shopify.com/avada-seo-suite", "alt": "Cài đặt tốc độ của Avada SEO Suite bên cạnh điểm hiệu năng web 86" },
+      { "key": "recruitme", "name": "RecruitMe", "badge": "Đại học FPT, 2024", "text": "Nền tảng tuyển dụng dùng AI, đọc CV bằng OCR và chấm điểm CV bằng AI; đồ án tốt nghiệp xuất sắc, được đăng trên trang tin Đại học FPT.", "role": "đồ án tốt nghiệp, Kỹ thuật phần mềm", "url": "https://daihoc.fpt.edu.vn/hoc-thuat-2/recruitme-giai-phap-tu-dong-hoa-tuyen-dung-cua-sinh-vien-truong-dai-hoc-fpt/", "alt": "Lâm mặc áo cử nhân tại lễ tốt nghiệp Đại học FPT" }
+    ]
   },
-  "Missions": {
-    "sectionLabel": "Nhật ký hành trình",
-    "m3": {
-      "code": "M-03",
-      "date": "10/2024 — Hiện tại",
-      "status": "đang bay",
-      "title": "Avada Group",
-      "titleSub": "· Full-Stack Developer & Team Lead",
-      "lede": "Dẫn dắt team 5 người (2 dev · 1 QA · 1 BA) làm Shopify apps phục vụ tổng cộng hàng chục nghìn merchant.",
-      "bullet1Rich": "<b>Avada SEO Suite</b> (~50k merchant) — xây image optimization pipeline, scale tới <em>hàng triệu ảnh sản phẩm mỗi merchant</em>.",
-      "bullet2Rich": "<b>AP Speed Optimizer</b> — lead từ 0 lên <em>5.000+ active merchant</em>, trung bình <em>~500 merchant mới / tháng</em> suốt sáu tháng liên tiếp.",
-      "bullet3Rich": "<b>Data Analytics Platform</b> — ingest 21 Shopify app vào BigQuery, model revenue, biên lợi nhuận, LTV, churn và tín hiệu khách hàng tiềm năng.",
-      "bullet4Rich": "Cắt chi phí hạ tầng <b>33% ($6k → $4k / tháng)</b>."
-    },
-    "m2": {
-      "code": "M-02",
-      "date": "8/2023 — 9/2024",
-      "status": "đã về",
-      "title": "VNPT Technology",
-      "titleSub": "· Full-Stack Developer",
-      "bullet1Rich": "<b>iOffice</b> — mở rộng nền tảng quản lý văn bản của nhà nước, chạy luồng công văn liên phòng ban, liên tỉnh trên toàn quốc.",
-      "bullet2Rich": "<b>Automation Management System</b> — công cụ nội bộ tự động hóa vận hành thiết bị mạng của VNPT Net."
-    },
-    "m1": {
-      "code": "M-01",
-      "date": "2020 — 2024",
-      "status": "cất cánh",
-      "title": "Đại học FPT",
-      "titleSub": "· Kỹ sư, Kỹ thuật phần mềm",
-      "bodyRich": "Tốt nghiệp loại \"Khá\" · 12/2024 · GPA 8.024/10. Đồ án tốt nghiệp (<em>RecruitMe</em>) được đánh giá xuất sắc, được đăng trên bản tin chính thức và các kênh Facebook chính thức của FPT."
-    }
+  "Results": {
+    "label": "Kết quả",
+    "heading": "Công việc đã thay đổi những gì, bằng con số.",
+    "stats": [
+      { "num": "5.000+", "text": "merchant đang dùng AP Speed Optimizer" },
+      { "num": "60%+", "text": "chi phí hạ tầng giảm trên AP Speed Optimizer" },
+      { "num": "#1", "text": "cho từ khoá “aeo” trên Shopify App Store" },
+      { "num": "25%", "text": "tỉ lệ chuyển đổi tăng, ở mức cao nhất, với cửa hàng dùng Speed Expert" }
+    ],
+    "note": "Đánh giá và thứ hạng lấy từ trang app trên Shopify App Store; các số liệu còn lại lấy từ CV của Lâm."
   },
-  "Projects": {
-    "sectionLabel": "Danh mục payload",
-    "recruitme": {
-      "tag": "nổi bật · đồ án",
-      "title": "RecruitMe",
-      "desc": "Nền tảng tuyển dụng ứng dụng AI — OCR CV (AWS Textract) và chấm điểm bằng generative-AI (Gemini). Đồ án tốt nghiệp đạt xuất sắc, được đăng trên bản tin và fanpage chính thức của Đại học FPT.",
-      "metaRole": "Team Lead · 5 người",
-      "metaDate": "8 – 12/2024",
-      "previewUrl": "recruitme.app — /pipeline",
-      "previewFooter": "Upload ▸ Textract OCR ▸ Gemini score ▸ Shortlist",
-      "featuredBadge": "Lên bản tin · Đại học FPT",
-      "pipelineStep1Title": "Upload CV",
-      "pipelineStep1Meta": "PDF · DOCX · ảnh",
-      "pipelineStep2Title": "OCR trích xuất",
-      "pipelineStep2Meta": "AWS Textract",
-      "pipelineStep3Title": "AI chấm điểm",
-      "pipelineStep3Meta": "Gemini · role-fit",
-      "pressClipLabel": "Đại học FPT · Tốt nghiệp 2025",
-      "pressTitle": "RecruitMe – Tự động hóa quy trình tuyển dụng với AI của sinh viên Trường Đại học FPT",
-      "pressSource": "daihoc.fpt.edu.vn",
-      "pressCategory": "Học thuật",
-      "pressDate": "06/01/2026",
-      "pressCta": "Đọc bài viết",
-      "pressUrl": "https://daihoc.fpt.edu.vn/hoc-thuat-2/recruitme-giai-phap-tu-dong-hoa-tuyen-dung-cua-sinh-vien-truong-dai-hoc-fpt/"
-    },
-    "seo": {
-      "tag": "đang bay",
-      "title": "Avada SEO Suite",
-      "desc": "Xây module tối ưu ảnh — chỉ là một mảnh trong bộ SEO suite phục vụ ~50k store Shopify, nhiều store có hàng trăm nghìn đến hàng triệu ảnh sản phẩm.",
-      "metricNum": "50k",
-      "metricLabel": "store phục vụ · hàng triệu ảnh / store",
-      "pipe1": "ẢNH SẢN PHẨM",
-      "pipe2": "NÉN",
-      "pipe2Sub": "webp · avif",
-      "pipe3": "CDN",
-      "pipe4": "STORE",
-      "metaMerchants": "~50k merchant",
-      "metaCompany": "Avada Group"
-    },
-    "speed": {
-      "tag": "đang bay",
-      "title": "AP Speed Optimizer",
-      "desc": "Zero → 5.000+ merchant trong sáu tháng. Lead sản phẩm + team.",
-      "kpi1Num": "5.000+",
-      "kpi1Label": "merchant active",
-      "kpi2Num": "+500",
-      "kpi2Unit": "/tháng",
-      "kpi2Label": "tăng trưởng TB",
-      "eqMultiplierNum": "6",
-      "eqMultiplierUnit": " tháng",
-      "eqMultiplierLabel": "liên tiếp",
-      "metaRole": "Team Lead",
-      "metaDuration": "6 tháng tăng trưởng đều"
-    },
-    "data": {
-      "tag": "nội bộ",
-      "title": "Avada Data Platform",
-      "desc": "21 Shopify app → BigQuery. Revenue, LTV, churn, signals.",
-      "outLabel": "outputs",
-      "out1": "doanh thu",
-      "out2": "biên",
-      "out3": "LTV",
-      "out4": "churn",
-      "out5": "tín hiệu",
-      "footRich": "<b>-33%</b> chi phí hạ tầng · $6k → $4k / tháng",
-      "metaScope": "Nội bộ",
-      "metaCompany": "Avada Group"
-    }
+  "Career": {
+    "label": "Sự nghiệp",
+    "heading": "Từ Đại học FPT tới tech lead.",
+    "items": [
+      { "year": "2026", "title": "Tech Lead · Avada Group", "text": "Thăng chức vào tháng 1, sau 6 tháng làm chính thức. Dẫn dắt team 5 người." },
+      { "year": "2025", "title": "Nhân viên xuất sắc quý 3 · Avada Group", "text": "Nhân viên xuất sắc của quý 3/2025." },
+      { "year": "2025", "title": "Full Stack Developer · Avada Group", "text": "React, Koa, Firebase, Cloud Run, BigQuery và Pub/Sub trên ba Shopify app." },
+      { "year": "2023", "title": "Full Stack Developer · VNPT Technology", "text": "IOFFICE, hệ thống quản lý văn bản cho cơ quan nhà nước, và một công cụ tự động hoá quản lý mạng." },
+      { "year": "2020", "title": "Kỹ thuật phần mềm · Đại học FPT", "text": "Cử nhân, 2020 đến 2024, GPA 8.02/10." }
+    ],
+    "photoAlt": "Lâm đứng trên bãi cát cầm trái dừa, phía sau là biển"
   },
   "Contact": {
-    "sectionLabel": "Kênh liên lạc",
-    "headingRich": "Có nhiệm vụ?<br></br><em>Cùng tìm cửa sổ phóng.</em>",
-    "body": "Mình sẵn sàng với vai trò full-stack full-time, hướng tech lead, và các hợp đồng thú vị — đặc biệt là những thứ có scale thật, data thật, hoặc user thật.",
-    "cta": "Mở kênh liên lạc",
-    "emailLabel": "Email",
-    "phoneLabel": "Điện thoại",
-    "phoneDisplay": "098 406 8859",
-    "linkedinLabel": "LinkedIn",
-    "linkedinDisplay": "lai-ngoc-lam",
-    "addressLabel": "Địa chỉ",
-    "address": "Nghĩa Đô, Cầu Giấy, Hà Nội",
-    "copyright": "© 2026 Lại Ngọc Lâm",
-    "motto": "— per aspera ad astra —",
-    "builtWith": "Built with Next.js, cực nhiều CSS, và một chút trọng lực."
+    "label": "Liên hệ",
+    "heading": "Cùng trao đổi về team sản phẩm của bạn.",
+    "lede": "Sẵn sàng cho vị trí tech lead và senior full-stack, Shopify app, tối ưu tốc độ web và phát triển phần mềm có AI hỗ trợ. Làm việc tại Cầu Giấy, Hà Nội.",
+    "cv": "Tải CV",
+    "linkedin": "Mở LinkedIn"
+  },
+  "Footer": {
+    "rights": "Tech Lead, Avada Group",
+    "label": "Chân trang"
   },
   "LocaleSwitcher": {
     "label": "Ngôn ngữ",

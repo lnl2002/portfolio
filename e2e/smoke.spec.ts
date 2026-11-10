@@ -5,145 +5,77 @@ test.describe("english @ /", () => {
     await page.goto("/");
   });
 
-  test("metadata + core nav renders", async ({ page }) => {
+  test("metadata + nav renders", async ({ page }) => {
     await expect(page).toHaveTitle(/Lại Ngọc Lâm/);
-    await expect(page.getByRole("link", { name: /Lại Ngọc Lâm/ }).first()).toBeVisible();
     const nav = page.locator("header.nav");
-    await expect(nav.getByRole("link", { name: "About", exact: true })).toBeVisible();
-    await expect(nav.getByRole("link", { name: "Stack", exact: true })).toBeVisible();
-    await expect(nav.getByRole("link", { name: "Missions", exact: true })).toBeVisible();
-    await expect(nav.getByRole("link", { name: "Projects", exact: true })).toBeVisible();
-    await expect(nav.getByRole("link", { name: "Contact", exact: true })).toBeVisible();
-  });
-
-  test("hero renders with title, coords, stats, ticker, satellites", async ({ page }) => {
-    await expect(page.getByRole("heading", { level: 1 })).toContainText(/speed of light/i);
-    await expect(page.locator(".hero-coords")).toContainText("HANOI · VIETNAM");
-    await expect(page.locator(".hero-stats")).toContainText("50k+");
-    await expect(page.locator(".hero-stats")).toContainText("merchants served");
-    await expect(page.locator(".hero-stats")).toContainText(/active merchants/i);
-    await expect(page.locator(".satellite.s1")).toContainText("React");
-    await expect(page.locator(".hero-ticker")).toContainText(/mission_log/);
-  });
-
-  test("all five sections exist with section numbers", async ({ page }) => {
-    for (const id of ["about", "skills", "missions", "projects", "contact"]) {
-      await expect(page.locator(`section#${id}`)).toBeVisible();
+    for (const name of ["How we work", "Products", "Results", "Career"]) {
+      await expect(nav.getByRole("link", { name, exact: true })).toBeVisible();
     }
-    await expect(page.locator("section#about .sec-num")).toHaveText("01");
-    await expect(page.locator("section#contact .sec-num")).toHaveText("05");
+    await expect(nav.getByRole("link", { name: "Email Lâm" })).toHaveAttribute("href", "mailto:laingoclam3112@gmail.com");
   });
 
-  test("skills grid has five cards", async ({ page }) => {
-    await expect(page.locator(".skills-grid .skill-card")).toHaveCount(5);
-    await expect(page.locator(".skill-card.wide h3")).toHaveText(/Leadership/i);
+  test("hero leads with results and App Store proof", async ({ page }) => {
+    await expect(page.locator("h1")).toHaveCount(1);
+    await expect(page.locator("h1")).toContainText("thousands of merchants");
+    const proof = page.locator(".proof li");
+    await expect(proof).toHaveCount(3);
+    await expect(proof.first()).toContainText("5.0 from 762 reviews");
+    await expect(page.locator(".hero__tag")).toContainText("Q3 2025");
   });
 
-  test("missions timeline has three entries with live first", async ({ page }) => {
-    const items = page.locator(".missions .mission");
-    await expect(items).toHaveCount(3);
-    await expect(items.first()).toHaveClass(/live/);
-    await expect(items.first().locator(".m-code")).toHaveText("M-03");
+  test("sections exist in order", async ({ page }) => {
+    const ids = await page.locator("main section[id]").evaluateAll((els) => els.map((e) => e.id));
+    expect(ids).toEqual(["story", "work", "impact", "career", "contact"]);
   });
 
-  test("projects grid has four cards with featured first", async ({ page }) => {
-    const projects = page.locator(".projects .project");
-    await expect(projects).toHaveCount(4);
-    await expect(projects.first()).toHaveClass(/featured/);
-    await expect(projects.first().locator("h3")).toHaveText("RecruitMe");
+  test("products: three apps plus RecruitMe, with real links", async ({ page }) => {
+    const cards = page.locator(".work .card");
+    await expect(cards).toHaveCount(4);
+    await expect(cards.first()).toHaveAttribute("href", "https://apps.shopify.com/ap-speed-optimizer");
+    await expect(cards.nth(3)).toHaveAttribute("href", /daihoc\.fpt\.edu\.vn/);
   });
 
-  test("RecruitMe has FPT-news ribbon, no fake candidate names, cited article card", async ({
-    page,
-  }) => {
-    const featured = page.locator(".projects .project.featured");
-    await expect(featured.locator(".p-ribbon")).toContainText(/FPT University News/i);
-    const body = await featured.textContent();
-    expect(body, "fake names must be gone").not.toMatch(/Nguyễn Minh Anh|Trần Hải|Lê Phương/);
-    await expect(featured).toContainText(/OCR extract/i);
-    await expect(featured).toContainText(/AI scoring/i);
-
-    const press = featured.locator("a.press-card");
-    await expect(press).toBeVisible();
-    await expect(press).toHaveAttribute(
-      "href",
-      "https://daihoc.fpt.edu.vn/hoc-thuat-2/recruitme-giai-phap-tu-dong-hoa-tuyen-dung-cua-sinh-vien-truong-dai-hoc-fpt/"
-    );
-    await expect(press).toHaveAttribute("target", "_blank");
-    await expect(press).toHaveAttribute("rel", /noopener/);
-    await expect(press.locator(".press-title")).toContainText(/RecruitMe/);
-    await expect(press.locator(".press-badge")).toContainText(/daihoc\.fpt\.edu\.vn/i);
-    await expect(press.locator(".press-cta")).toContainText(/Read the article/i);
+  test("results and career figures match the CV", async ({ page }) => {
+    await expect(page.locator(".stats")).toContainText("5,000+");
+    await expect(page.locator(".stats")).toContainText("60%+");
+    await expect(page.locator(".timeline")).toContainText("Outstanding Employee of the Quarter for Q3 2025");
+    await expect(page.locator("main")).not.toContainText("Q3 2026");
   });
 
-  test("about card shows avatar + download CV link", async ({ page }) => {
-    const card = page.locator(".about-card");
-    await expect(card.locator(".about-avatar img")).toBeVisible();
-    const cv = card.locator("a.link-cv");
-    await expect(cv).toBeVisible();
-    await expect(cv).toHaveAttribute("href", "/Lai_Ngoc_Lam_CV.pdf");
-    await expect(cv).toHaveAttribute("download", "");
+  test("images are optimised and lazy below the fold", async ({ page }) => {
+    const hero = page.locator(".hero__photo");
+    await expect(hero).toHaveAttribute("src", /_next\/image/);
+    await expect(page.locator(".card__pic img").first()).toHaveAttribute("loading", "lazy");
+    await expect(page.locator(".career__photo img")).toHaveAttribute("loading", "lazy");
   });
 
-  test("hero CTA exposes a CV download button", async ({ page }) => {
-    const cta = page.locator(".hero-cta a[href='/Lai_Ngoc_Lam_CV.pdf']");
-    await expect(cta).toBeVisible();
-    await expect(cta).toHaveAttribute("download", "");
+  test("CV download links", async ({ page }) => {
+    await expect(page.locator(".hero a[href='/Lai_Ngoc_Lam_CV.pdf']")).toHaveAttribute("download", "");
+    await expect(page.locator("#contact a[href='/Lai_Ngoc_Lam_CV.pdf']")).toBeVisible();
   });
 
-  test("speed KPI reads 5,000+", async ({ page }) => {
-    const speed = page.locator(".projects .project").nth(2);
-    await expect(speed.locator(".eq-chip.eq-result b")).toContainText("5,000+");
-  });
-
-  test("contact shows email, phone, address, motto", async ({ page }) => {
-    const contact = page.locator("section#contact");
-    await expect(contact).toContainText("laingoclam3112@gmail.com");
-    await expect(contact).toContainText(/Nghĩa Đô/);
-    await expect(contact.locator(".foot-motto")).toContainText("per aspera ad astra");
-  });
-
-  test("about card shows full-precision GPA", async ({ page }) => {
-    const card = page.locator(".about-card");
-    await expect(card).toContainText("8.024/10");
-  });
-
-  test("hero sub mentions 6-month leadership", async ({ page }) => {
-    await expect(page.locator(".hero-sub")).toContainText(/6 months/i);
-  });
-
-  test("mission M-01 mentions both FPT news and Facebook", async ({ page }) => {
-    const m1 = page.locator(".missions .mission").filter({ hasText: "M-01" });
-    await expect(m1).toHaveCount(1);
-    await expect(m1).toContainText(/official news/i);
-    await expect(m1).toContainText(/Facebook/i);
+  test("contact shows the email", async ({ page }) => {
+    await expect(page.locator("section#contact")).toContainText("laingoclam3112@gmail.com");
   });
 });
 
 test.describe("vietnamese @ /vi", () => {
   test("renders Vietnamese copy", async ({ page }) => {
     await page.goto("/vi");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText(/vận tốc ánh sáng/);
-    await expect(page.locator(".hero-coords")).toContainText("HÀ NỘI · VIỆT NAM");
+    await expect(page.locator("h1")).toContainText("hàng nghìn merchant");
     const nav = page.locator("header.nav");
-    await expect(nav.getByRole("link", { name: "Giới thiệu" })).toBeVisible();
-    await expect(nav.getByRole("link", { name: "Dự án" })).toBeVisible();
+    await expect(nav.getByRole("link", { name: "Sản phẩm" })).toBeVisible();
+    await expect(page.locator(".timeline")).toContainText("quý 3/2025");
   });
 });
 
-async function waitForHydration(page: import("@playwright/test").Page) {
-  await page.waitForFunction(() => !!document.getElementById("themeToggle"));
-}
-
-test("theme toggle flips data-theme", async ({ page }) => {
+test("favicon is the custom SVG icon", async ({ page, request }) => {
   await page.goto("/");
-  const html = page.locator("html");
-  await expect(html).toHaveAttribute("data-theme", "dark");
-  await waitForHydration(page);
-  await page.getByRole("button", { name: "Toggle theme" }).click();
-  await expect(html).toHaveAttribute("data-theme", "light");
-  await page.getByRole("button", { name: "Toggle theme" }).click();
-  await expect(html).toHaveAttribute("data-theme", "dark");
+  const href = await page.locator('link[rel="icon"][type="image/svg+xml"]').first().getAttribute("href");
+  expect(href).toBeTruthy();
+  const res = await request.get(href as string);
+  expect(res.status()).toBe(200);
+  expect(await res.text()).toContain("#6c9bff");
 });
 
 test("locale switcher navigates without console errors", async ({ page }) => {
@@ -153,13 +85,12 @@ test("locale switcher navigates without console errors", async ({ page }) => {
     if (m.type() === "error") errors.push(`[console.error] ${m.text()}`);
   });
   await page.goto("/");
-  await waitForHydration(page);
   await page
     .getByRole("navigation", { name: "Language" })
     .getByRole("link", { name: "VI", exact: true })
     .click();
   await expect(page).toHaveURL(/\/vi$/);
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(/vận tốc ánh sáng/);
+  await expect(page.locator("h1")).toContainText("Shopify app");
   expect(errors, `unexpected errors: ${errors.join(" | ")}`).toEqual([]);
 });
 
@@ -234,7 +165,7 @@ test.describe("SEO", () => {
     await page.goto("/");
     const ogUrl = await page.locator('meta[property="og:image"]').first().getAttribute("content");
     expect(ogUrl, "og:image meta missing").toBeTruthy();
-    const res = await request.get(ogUrl as string);
+    const res = await request.get(new URL(ogUrl as string).pathname);
     expect(res.status()).toBe(200);
     expect(res.headers()["content-type"]).toContain("image/png");
   });

@@ -1,24 +1,34 @@
 import type { Metadata } from "next";
-import { ThemeInitScript } from "@/components/ThemeInitScript";
+import { Anton, Archivo } from "next/font/google";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
+
+const archivo = Archivo({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600"],
+  variable: "--font-text",
+  display: "swap",
+});
+
+const anton = Anton({
+  subsets: ["latin", "vietnamese"],
+  weight: "400",
+  variable: "--font-figure",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 };
 
+export const viewport = {
+  themeColor: "#0b0d10",
+  colorScheme: "dark",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
-        />
-        <ThemeInitScript />
-      </head>
+    <html lang="en" className={`${archivo.variable} ${anton.variable}`} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

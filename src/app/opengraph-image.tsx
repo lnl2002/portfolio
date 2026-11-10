@@ -1,74 +1,42 @@
 import { ImageResponse } from "next/og";
 import { SITE_URL } from "@/lib/site";
 
-export const alt = "Lại Ngọc Lâm — Full-Stack Developer";
+export const alt = "Lại Ngọc Lâm — Tech Lead for Shopify apps";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OpengraphImage() {
   const host = SITE_URL.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  const stats = [
+    ["5,000+", "active merchants · AP Speed Optimizer"],
+    ["#1", "for “aeo” on the Shopify App Store"],
+    ["60%+", "lower infrastructure cost"],
+  ];
   return new ImageResponse(
     (
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "72px 80px",
-          background:
-            "radial-gradient(ellipse at 20% 10%, #1a2a4a 0%, #0a0f1a 55%, #05070d 100%)",
-          color: "#e8edf6",
-          fontFamily: "sans-serif",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: 18, fontSize: 22, letterSpacing: 6, textTransform: "uppercase", color: "#7aa2ff" }}>
-          <span style={{ display: "block", width: 14, height: 14, borderRadius: 999, background: "#7aa2ff", boxShadow: "0 0 24px #7aa2ff" }} />
-          <span>LAT 21.0370° N</span>
-          <span style={{ opacity: 0.4 }}>·</span>
-          <span>HANOI · VIETNAM</span>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              fontSize: 78,
-              fontWeight: 600,
-              letterSpacing: -1.5,
-              lineHeight: 1.08,
-              color: "#f6f8fc",
-              maxWidth: 1040,
-            }}
-          >
-            <span>Building software at the&nbsp;</span>
-            <span style={{ color: "#7aa2ff" }}>speed of light,&nbsp;</span>
-            <span>grounded on Earth.</span>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 30,
-              color: "#b4bed2",
-              maxWidth: 980,
-              lineHeight: 1.35,
-            }}
-          >
-            Lại Ngọc Lâm — Full-Stack Developer. 3 years shipping products serving 50,000+ merchants, plus 6 months leading a 5-person crew.
+      <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "64px 72px", background: "#0b0d10", color: "#eef1f5", fontFamily: "sans-serif" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+          <div style={{ width: 56, height: 56, borderRadius: 14, background: "#6c9bff", color: "#0b0d10", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, fontWeight: 700 }}>LN</div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <span style={{ fontSize: 30, fontWeight: 600 }}>Lại Ngọc Lâm</span>
+            <span style={{ fontSize: 22, color: "#8b93a1" }}>Tech Lead · Avada Group · Hanoi</span>
           </div>
         </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 10, fontSize: 22, color: "#8a94a8", letterSpacing: 2, textTransform: "uppercase" }}>
-          <div style={{ display: "flex", gap: 32 }}>
-            <span>50k+ merchants</span>
-            <span style={{ opacity: 0.4 }}>·</span>
-            <span>33% infra cut</span>
-            <span style={{ opacity: 0.4 }}>·</span>
-            <span>5k+ active / 6 mo</span>
+        <div style={{ display: "flex", flexWrap: "wrap", fontSize: 62, fontWeight: 700, lineHeight: 1.1, letterSpacing: -1.5, maxWidth: 1040 }}>
+          <span>I lead a team building Shopify apps that&nbsp;</span>
+          <span style={{ color: "#6c9bff" }}>thousands of merchants</span>
+          <span>&nbsp;run their stores on.</span>
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+          <div style={{ display: "flex", gap: 48 }}>
+            {stats.map(([n, l]) => (
+              <div key={n} style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                <span style={{ fontSize: 40, fontWeight: 700 }}>{n}</span>
+                <span style={{ fontSize: 19, color: "#8b93a1" }}>{l}</span>
+              </div>
+            ))}
           </div>
-          <div style={{ display: "flex", color: "#7aa2ff" }}>{host}</div>
+          <span style={{ fontSize: 22, color: "#6c9bff" }}>{host}</span>
         </div>
       </div>
     ),
