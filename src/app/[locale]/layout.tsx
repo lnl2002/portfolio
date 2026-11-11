@@ -9,6 +9,14 @@ import { PersonJsonLd, WebsiteJsonLd } from "@/components/PersonJsonLd";
 import { Footer } from "@/components/Footer";
 import { DEFAULT_LOCALE, SITE_NAME, SITE_URL, localeUrl } from "@/lib/site";
 
+// Child openGraph/twitter objects replace the root opengraph-image, so point to it explicitly.
+const OG_IMAGE = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "Lại Ngọc Lâm — Full-Stack Engineer, Shopify apps",
+};
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -68,11 +76,13 @@ export async function generateMetadata({
       description,
       locale: locale === "vi" ? "vi_VN" : "en_US",
       alternateLocale: locale === "vi" ? ["en_US"] : ["vi_VN"],
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [OG_IMAGE],
     },
     robots: {
       index: true,
