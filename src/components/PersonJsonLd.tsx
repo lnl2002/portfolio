@@ -34,9 +34,7 @@ export function PersonJsonLd({ locale }: { locale: string }) {
     address: {
       "@type": "PostalAddress",
       addressLocality: "Hanoi",
-      addressRegion: "Cầu Giấy",
       addressCountry: "VN",
-      streetAddress: "Nghĩa Đô",
     },
     sameAs,
     knowsAbout: [
