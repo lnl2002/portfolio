@@ -23,8 +23,8 @@ h1, h2 { font-family: var(--text); font-weight: 600; letter-spacing: -.025em; li
 .nav { position: fixed; inset: 0 0 auto; z-index: 20; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
 .nav.is-solid { background: rgba(11,13,16,.92); border-color: var(--line); }
 .nav__bar { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; font: 500 15px/1 var(--text); }
-.brand__mono { width: 32px; height: 32px; border-radius: 8px; background: var(--blue); color: var(--blue-ink); display: grid; place-items: center; font: 600 13px/1 var(--text); }
+.brand { display: inline-flex; align-items: center; gap: 14px; font: 600 16px/1 var(--text); letter-spacing: -.02em; color: var(--ink); }
+.logo-mark { flex: none; display: block; }
 .nav__links { display: flex; gap: 30px; }
 .nav__links a { font: 500 14px/1 var(--text); color: var(--muted); padding: 14px 0; position: relative; transition: color .2s; }
 .nav__links a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 8px; height: 1px; background: var(--blue); transition: right .25s; }

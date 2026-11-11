@@ -75,7 +75,7 @@ test("favicon is the custom SVG icon", async ({ page, request }) => {
   expect(href).toBeTruthy();
   const res = await request.get(href as string);
   expect(res.status()).toBe(200);
-  expect(await res.text()).toContain("#6c9bff");
+  expect(await res.text()).toContain("#3B5BDB");
 });
 
 test("locale switcher navigates without console errors", async ({ page }) => {

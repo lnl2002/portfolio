@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { LogoMark } from "@/components/LogoMark";
 import { NavScroll } from "@/components/NavScroll";
 import { SITE_EMAIL } from "@/lib/site";
 
@@ -19,7 +20,7 @@ export async function Nav() {
         <NavScroll />
         <div className="wrap nav__bar">
           <a className="brand" href="#top" aria-label={t("home")}>
-            <span className="brand__mono" aria-hidden="true">LN</span>Lại Ngọc Lâm
+            <LogoMark />Lại Ngọc Lâm
           </a>
           <nav className="nav__links" aria-label={t("main")}>
             {links.map(([id, label]) => (
